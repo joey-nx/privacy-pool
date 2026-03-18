@@ -1,0 +1,44 @@
+{
+  "name": "latent-mvp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Latent — Compliant Privacy Stablecoin Payments",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "generate": "tsx scripts/generate_test_vectors.ts",
+    "generate:e2e": "tsx scripts/generate_test_vectors.ts --e2e",
+    "test:e2e": "bash scripts/e2e_test.sh",
+    "test:e2e:no-onchain": "bash scripts/e2e_test.sh --no-onchain",
+    "test:contracts": "cd contracts && forge test -vv",
+    "test:sequencer": "npm -w @latent/sequencer test",
+    "test:sequencer:watch": "npm -w @latent/sequencer run test:watch",
+    "test:sdk": "npm -w @latent/sdk test",
+    "dev:sequencer": "bash scripts/dev-sequencer.sh",
+    "dev:frontend": "bash scripts/dev-frontend.sh",
+    "dev": "bash scripts/dev.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joey-to-nexus/latent-mvp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joey-to-nexus/latent-mvp/issues"
+  },
+  "homepage": "https://github.com/joey-to-nexus/latent-mvp#readme",
+  "dependencies": {
+    "@aztec/foundation": "^2.1.11",
+    "@noble/curves": "^1.8.0",
+    "ethers": "^6.16.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0"
+  }
+}

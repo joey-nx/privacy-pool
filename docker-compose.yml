@@ -1,0 +1,51 @@
+services:
+  # ── Sequencer ──
+  # Merkle tree, note scanner, operator service
+  sequencer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: sequencer
+    ports:
+      - "${SEQ_PORT:-3002}:${SEQ_PORT:-3002}"
+    environment:
+      - RPC_URL=${RPC_URL:-https://testnet.crosstoken.io:22001}
+      - POOL_ADDRESS=${POOL_ADDRESS:-0x5fB82D522C4e3471cB2b9578E6f5284Cef8c9a4D}
+      - RELAYER_KEY=${RELAYER_KEY}
+      - OPERATOR_KEY=${OPERATOR_KEY:-${RELAYER_KEY}}
+      - FROM_BLOCK=${FROM_BLOCK:-22723038}
+      - SEQ_PORT=${SEQ_PORT:-3002}
+      - SEQ_POLL=${SEQ_POLL:-5000}
+      - SEQ_CONFIRMATIONS=${SEQ_CONFIRMATIONS:-1}
+      - SEQ_DATA_DIR=/app/data
+    volumes:
+      - sequencer-data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:${SEQ_PORT:-3002}/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # ── Frontend ──
+  # Next.js web application
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+      args:
+        - NEXT_PUBLIC_SEQUENCER_URL=${NEXT_PUBLIC_SEQUENCER_URL:-http://localhost:3002}
+        - NEXT_PUBLIC_POOL_ADDRESS=${NEXT_PUBLIC_POOL_ADDRESS:-0x5fB82D522C4e3471cB2b9578E6f5284Cef8c9a4D}
+        - NEXT_PUBLIC_TOKEN_ADDRESS=${NEXT_PUBLIC_TOKEN_ADDRESS:-0x9364ea6790f6e0ecfaa5164085f2a7de34ec55fb}
+        - NEXT_PUBLIC_CIRCUIT_URL=${NEXT_PUBLIC_CIRCUIT_URL:-/circuit/latent_circuit.json}
+    ports:
+      - "13000:3000"
+    depends_on:
+      sequencer:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  sequencer-data:

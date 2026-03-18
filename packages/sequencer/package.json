@@ -1,0 +1,27 @@
+{
+  "name": "@latent/sequencer",
+  "version": "0.1.0",
+  "description": "Latent Privacy Pool Sequencer — Merkle tree, note scanner, operator service",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./crypto": "./src/crypto.ts"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@aztec/bb.js": "3.0.0-nightly.20260102",
+    "@noble/curves": "^1.8.0",
+    "@noble/hashes": "^1.8.0",
+    "ethers": "^6.16.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.0"
+  }
+}

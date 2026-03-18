@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/*
+ * Component classes — @layer components so utilities can still override,
+ * and dark mode uses the same :is(.dark *) selector as the custom variant.
+ */
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-amber-600 to-amber-700 text-white transition-all duration-300;
+    box-shadow: 0 0 30px rgba(217, 119, 6, 0.4);
+
+    &:hover {
+      box-shadow: 0 0 50px rgba(217, 119, 6, 0.6);
+    }
+
+    &:is(.dark *) {
+      @apply from-amber-400 to-amber-500;
+      box-shadow: 0 0 30px rgba(251, 191, 36, 0.4);
+
+      &:hover {
+        box-shadow: 0 0 50px rgba(251, 191, 36, 0.6);
+      }
+    }
+  }
+
+  .card-surface {
+    @apply border backdrop-blur-sm border-gray-200 bg-white/60;
+
+    &:is(.dark *) {
+      @apply border-gray-800 bg-gray-900/40;
+    }
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-gray-600 to-gray-700 bg-clip-text text-transparent;
+
+    &:is(.dark *) {
+      @apply from-gray-400 to-gray-500;
+    }
+  }
+
+  .accent-dot {
+    @apply w-1.5 h-1.5 rounded-full bg-amber-600;
+
+    &:is(.dark *) {
+      @apply bg-amber-400;
+    }
+  }
+}

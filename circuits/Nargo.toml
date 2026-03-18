@@ -1,0 +1,8 @@
+[package]
+name = "latent_circuit"
+type = "bin"
+authors = [""]
+compiler_version = ">=1.0.0"
+
+[dependencies]
+# Poseidon2 is built into Noir stdlib — no external dependency needed

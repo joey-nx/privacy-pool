@@ -1,0 +1,12 @@
+**/node_modules
+**/.next
+**/dist
+**/out
+**/.env
+**/.env.local
+.git
+.github
+contracts/
+circuits/
+data/
+*.md

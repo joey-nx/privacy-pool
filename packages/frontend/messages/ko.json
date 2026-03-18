@@ -1,0 +1,1036 @@
+{
+  "metadata": {
+    "title": "Private Pool",
+    "description": "영지식 증명 기반 프라이버시 보호 암호화폐 전송"
+  },
+  "navigation": {
+    "brand": "Private Pool",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "compliance": "Compliance",
+    "app": "App",
+    "docs": "Docs",
+    "toggleTheme": "테마 전환"
+  },
+  "hero": {
+    "label": "Private Pool Protocol",
+    "heading": "Stealth transfers.",
+    "subheading": "Trusted by Zero-Knowledge Proof.",
+    "launchApp": "Launch App",
+    "readDocs": "Read Documentation"
+  },
+  "features": {
+    "label": "Features",
+    "heading": "완벽한 익명성의\n새로운 기준",
+    "headingHighlight": "새로운 기준",
+    "zkProofsTitle": "Zero-Knowledge Proofs",
+    "zkProofsDesc": "영지식 증명으로 거래를 검증하면서도 보내는 사람과 받는 사람의 정보를 완벽하게 숨깁니다.",
+    "untraceableTitle": "Untraceable",
+    "untraceableDesc": "온체인에서도 사용 흐름을 드러내지 않아, 누가 누구에게 보냈는지 추적할 수 없습니다.",
+    "gameChainTitle": "Game Chain Optimized",
+    "gameChainDesc": "게임 체인에 최적화된 빠른 속도와 낮은 수수료의 익명 거래를 제공합니다.",
+    "stealthTitle": "Stealth Addresses",
+    "stealthDesc": "매번 새로운 일회용 주소를 생성하여 수신자의 프라이버시를 보호합니다."
+  },
+  "howItWorks": {
+    "label": "How It Works",
+    "heading": "4단계로 완성되는\n완벽한 프라이버시",
+    "headingHighlight": "완벽한 프라이버시",
+    "step1Title": "지갑 연결",
+    "step1Desc": "게임 체인 지갑을 Privacy Pool에 연결합니다.",
+    "step2Title": "토큰 입금",
+    "step2Desc": "스마트 컨트랙트에 토큰을 입금하고 비밀 노트를 받습니다.",
+    "step3Title": "시간 대기",
+    "step3Desc": "익명성을 위해 다른 사용자들의 거래와 섞이는 시간을 가집니다.",
+    "step4Title": "익명 출금",
+    "step4Desc": "새로운 주소로 추적 불가능한 출금을 완료합니다.",
+    "securityTitle": "Trustless by design. Verified by ZKP.",
+    "securityDesc": "영지식 증명(ZK-SNARKs)으로 거래의 유효성만 검증하고 내용은 감춥니다.",
+    "viewDocs": "View Technical Docs"
+  },
+  "compliance": {
+    "label": "Compliance",
+    "heading": "Privacy for the public,",
+    "headingHighlight": "Transparency for regulators",
+    "subtitle": "",
+    "pillar1Title": "프라이버시",
+    "pillar1Subtitle": "Privacy",
+    "pillar1Desc": "외부에서 보내는 사람과 받는 사람의 연결을 알 수 없음",
+    "pillar1Mechanism": "ZK proof + stealth address",
+    "pillar2Title": "규제 준수",
+    "pillar2Subtitle": "Regulatory Compliance",
+    "pillar2Desc": "운영자가 보내는 사람·받는 사람·금액을 추적 가능",
+    "pillar2Mechanism": "Compliance hash + ECIES 암호화",
+    "pillar3Title": "검열 저항",
+    "pillar3Subtitle": "Censorship Resistance",
+    "pillar3Desc": "운영자가 거부하거나 장애가 나도 자금 인출 보장",
+    "pillar3Mechanism": "24h timeout fallback",
+    "mechanism": "메커니즘",
+    "privacyFirstHeading": "프라이버시를",
+    "privacyFirstHighlight": "최우선으로",
+    "privacyFirstDesc": "일반 사용자는 거래 당사자와 금액을 알 수 없습니다.\n규제 기관만이 필요한 경우에 한해 확인할 수 있어, 프라이버시를 최대한 보호합니다.",
+    "publicObserverTitle": "일반 사용자",
+    "publicObserverSubtitle": "Public Observer",
+    "publicLabel1": "보낸 사람",
+    "publicLabel2": "받는 사람",
+    "publicLabel3": "거래 금액",
+    "publicLabel4": "거래 연결",
+    "publicHidden": "??? ??? ??? ???",
+    "publicUninferable": "추론 불가능",
+    "publicNote": "모든 핵심 정보가 암호화되어 일반 사용자로부터 완벽하게 보호됩니다.",
+    "operatorTitle": "규제 기관",
+    "operatorSubtitle": "Compliance Operator",
+    "operatorValue1": "0x1234...5678",
+    "operatorValue2": "0xabcd...ef00",
+    "operatorValue3": "10.5 ETH",
+    "operatorValue4": "검증 가능",
+    "operatorNote": "필요한 상황에서만 접근 가능하며, 자금을 탈취할 수 없는 구조로 설계되었습니다.",
+    "conditionalAccess": "조건부 접근",
+    "keyMessageTitle": "프라이버시 우선 설계",
+    "keyMessageContent": "거래의 핵심 정보(보낸 사람, 받는 사람, 금액)는 Zero-Knowledge Proofs와 암호화를 통해 일반 사용자로부터 완벽하게 숨겨집니다. 규제 기관은 오직 <highlight>컴플라이언스 검증이 필요한 경우에만</highlight> 해당 정보를 복호화할 수 있으며, 이 과정에서도 사용자의 자금을 탈취할 수 없도록 설계되어 프라이버시를 최대한 보호합니다.",
+    "twoStageHeading": "2-Stage Withdrawal",
+    "stage1Title": "Initiate",
+    "stage1Subtitle": "출금 요청",
+    "stage1Step1": "ZK proof 검증",
+    "stage1Step2": "Compliance hash on-chain 기록",
+    "stage1Step3": "대기 상태로 등록",
+    "stage2Title": "Complete",
+    "stage2Subtitle": "출금 완료",
+    "operatorApproval": "Operator 승인",
+    "operatorApprovalDesc": "컴플라이언스 검증 후 즉시 자금 지급",
+    "timeoutTitle": "24h Timeout",
+    "timeoutDesc": "운영자 응답이 없으면 자동 실행",
+    "operatorVerificationHeading": "Operator 검증 절차",
+    "opStep1Num": "1",
+    "opStep1Title": "Operator Note 복호화",
+    "opStep1Desc": "ECIES 복호화로 secret 복원",
+    "opStep2Num": "2",
+    "opStep2Title": "Compliance Hash 검증",
+    "opStep2Desc": "Depositor, recipient, amount, secret로 해시 재계산",
+    "opStep3Num": "3",
+    "opStep3Title": "KYC 확인",
+    "opStep3Desc": "Depositor와 recipient NPK 조회 및 제재 대상 확인",
+    "opStep4Num": "4",
+    "opStep4Title": "정책 판단",
+    "opStep4Desc": "적합하면 즉시 승인, 아니면 24시간 후 자동 실행",
+    "securityGuaranteeTitle": "보안 보장",
+    "securityGuaranteeNote": "운영자는 보내는 사람과 받는 사람의 연결을 알 수 있지만, NSK(nullifier secret key)가 없어 자금을 탈취할 수 없습니다. 24시간 타임아웃으로 검열 저항성도 보장됩니다."
+  },
+  "footer": {
+    "brand": "Private Pool",
+    "description": "영지식 증명 기반 프라이버시 보호 암호화폐 전송.",
+    "product": "제품",
+    "resources": "리소스",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "compliance": "Compliance",
+    "documentation": "문서",
+    "github": "GitHub",
+    "copyright": "\u00a9 2026 Private Pool. All rights reserved.",
+    "terms": "이용약관",
+    "privacy": "개인정보처리방침",
+    "disclaimer": "Private Pool은 실험적 프로토콜입니다. 불법적인 사용은 금지됩니다. 사용자는 해당 관할권의 법률을 준수할 책임이 있습니다."
+  },
+  "app": {
+    "brand": "Private Pool",
+    "connecting": "연결 중...",
+    "metamask": "MetaMask",
+    "wrongNetwork": "잘못된 네트워크",
+    "connectedWallet": "연결된 지갑",
+    "network": "네트워크",
+    "unknownNetwork": "알 수 없음 ({chainId})",
+    "disconnectWallet": "지갑 연결 해제",
+    "connectHeading": "지갑을 연결하세요",
+    "connectDescription": "Private Pool을 사용하려면 지갑을 연결하세요",
+    "connectButton": "MetaMask 연결",
+    "noMetamask": "MetaMask가 없으세요?",
+    "downloadHere": "다운로드하기",
+    "wrongNetworkTitle": "잘못된 네트워크",
+    "wrongNetworkDesc": "{chainName} 네트워크로 전환해주세요.",
+    "switchNetwork": "네트워크 전환",
+    "tabReceive": "받기",
+    "tabSend": "보내기",
+    "tabHistory": "거래 내역"
+  },
+  "send": {
+    "title": "비공개 전송",
+    "description": "받는 사람의 결제 링크를 붙여넣고 영지식 증명으로 자금을 전송하세요.",
+    "recipientLabel": "받는 사람 결제 링크",
+    "placeholder": "https://app.latent.com/pay?npk=...&enc=...",
+    "amountLabel": "금액",
+    "insufficientBalance": "{symbol} 잔액 부족",
+    "sendButton": "전송",
+    "processing": "처리 중...",
+    "stepPrepare": "입금 준비 중",
+    "stepEncrypt": "노트 암호화 중",
+    "stepApprove": "토큰 승인 중",
+    "stepSubmit": "트랜잭션 제출 중",
+    "stepConfirm": "트랜잭션 확인 대기 중"
+  },
+  "sendSuccess": {
+    "title": "전송 완료",
+    "done": "완료"
+  },
+  "receive": {
+    "titleWithLink": "결제 링크",
+    "titleWithoutLink": "결제 링크 생성",
+    "descWithLink": "비공개로 자금을 보내려는 사람에게 이 링크를 공유하세요. 재사용 가능하며 공개적으로 공유해도 안전합니다.",
+    "descWithoutLink": "나만의 결제 링크를 생성하세요. 비공개로 자금을 보내려는 사람에게 이 링크를 공유하면 됩니다.",
+    "generateButton": "결제 링크 생성",
+    "generatingKeys": "키 생성 중...",
+    "copy": "복사",
+    "copied": "복사됨",
+    "qrCode": "QR 코드",
+    "share": "공유",
+    "shareMessage": "Private Pool로 비공개 암호화폐 전송\n\n프라이버시 · 보안 · 영지식 증명",
+    "reusableInfo": "이 링크는 여러 번 사용할 수 있고, 공개적으로 공유해도 안전합니다",
+    "qrTitle": "결제 QR 코드",
+    "qrScanText": "스캔하여 결제 링크를 받으세요"
+  },
+  "receivedFunds": {
+    "title": "받은 자금",
+    "scanButton": "노트 스캔",
+    "scanning": "스캔 중...",
+    "emptyState": "받은 노트가 없습니다. \"노트 스캔\"을 눌러 받은 자금을 확인하세요.",
+    "withdrawn": "출금 완료",
+    "completed": "완료",
+    "withdraw": "출금",
+    "justNow": "방금 전",
+    "minutesAgo": "{count}분 전",
+    "hoursAgo": "{count}시간 전",
+    "daysAgo": "{count}일 전"
+  },
+  "withdrawal": {
+    "failed": "출금 실패",
+    "complete": "출금 완료",
+    "withdrawing": "출금 중...",
+    "noteCounter": "노트 {index}/{total}",
+    "stepMerkle": "Merkle 증명 가져오는 중",
+    "stepCompute": "회로 입력값 계산 중",
+    "stepWitness": "Witness 생성 중",
+    "stepProve": "ZK 증명 생성 중",
+    "stepSubmit": "트랜잭션 제출 중",
+    "successMessage": "{count} {symbol} 출금 완료",
+    "close": "닫기",
+    "done": "완료"
+  },
+  "history": {
+    "title": "거래 내역",
+    "description": "모든 전송 및 출금 거래를 확인하세요.",
+    "loading": "거래 내역을 불러오는 중...",
+    "emptyHeading": "거래 내역이 없습니다.",
+    "emptyText": "전송 또는 출금 후 거래 내역이 여기에 표시됩니다.",
+    "sent": "전송",
+    "withdrawn": "출금",
+    "completed": "완료",
+    "pending": "대기 중"
+  },
+  "docs": {
+    "hero": {
+      "label": "기술 문서",
+      "heading": "프로토콜 아키텍처",
+      "description": "ZK 회로부터 SDK 통합까지, Privacy Pool 프로토콜을 이해하고 통합하기 위한 기술 가이드."
+    },
+    "sidebar": {
+      "overview": "Overview",
+      "concepts": "Why Privacy Pool?",
+      "protocol": "Protocol Flow",
+      "circuit": "ZK Circuit",
+      "contracts": "Smart Contracts",
+      "sequencer": "Sequencer",
+      "sdk": "SDK",
+      "compliance": "Compliance"
+    },
+    "overview": {
+      "title": "Overview",
+      "intro1": "Privacy Pool는 프라이버시와 규제 준수를 동시에 해결하는 프로토콜입니다. ZK 회로, 스텔스 주소, 암호화된 노트 등을 활용해 일반 관찰자에게는 거래 내역을 숨기면서도, 규제 기관에게는 필요한 정보를 선택적으로 공개할 수 있습니다.",
+      "intro2": "이 문서에서는 프로토콜의 전체 흐름부터 ZK 회로 구조, 스마트 컨트랙트, 시퀀서, SDK 통합까지 Privacy Pool를 이해하고 활용하는 데 필요한 모든 내용을 다룹니다.",
+      "intro3": "본 프로토콜은 <paperLink>Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium</paperLink> 논문과 <eipLink>EIP-5564 Stealth Address</eipLink> 표준, 그리고 0xbow의 <poolsLink>Privacy Pools</poolsLink> 프로젝트를 참고하여 설계되었으며, 영지식 증명에 적합하도록 최적화하였습니다. ZK 회로는 <noirLink>Aztec Noir</noirLink>로 작성되어 Client-side proving을 지원하며, 사용자의 민감 정보를 개인 기기를 벗어나지 않고 안전하게 처리합니다.",
+      "comparisonTitle": "Privacy Pool의 차별점",
+      "comparison": {
+        "labels": {
+          "privacy": "프라이버시",
+          "compliance": "컴플라이언스",
+          "traceability": "추적 가능성"
+        },
+        "traditional": {
+          "name": "일반 블록체인",
+          "privacy": "모든 거래 공개",
+          "compliance": "완전 투명",
+          "traceability": "완전 추적 가능"
+        },
+        "tornado": {
+          "name": "Tornado Cash",
+          "privacy": "완전 익명",
+          "compliance": "컴플라이언스 없음 → OFAC 제재",
+          "traceability": "추적 불가"
+        },
+        "latent": {
+          "name": "Privacy Pool",
+          "privacy": "조건부 프라이버시",
+          "compliance": "Compliance hash + ECIES",
+          "traceability": "운영자만 추적 가능"
+        }
+      },
+      "layersTitle": "4계층 메커니즘",
+      "layers": {
+        "stealthAddress": {
+          "name": "Stealth Address",
+          "tech": "ECIES (secp256k1 ECDH)",
+          "description": "일회용 스텔스 주소를 통한 수신자 익명화"
+        },
+        "encryptedNote": {
+          "name": "Encrypted Note",
+          "tech": "ECIES 암호화 + View Tag",
+          "description": "효율적인 스캔을 통한 안전한 노트 전달"
+        },
+        "privacyPool": {
+          "name": "Privacy Pool",
+          "tech": "Poseidon2 Merkle + ZK Proof",
+          "description": "커밋먼트 풀을 통한 송신자 익명화"
+        },
+        "zkProof": {
+          "name": "ZK Proof",
+          "tech": "UltraHonk (Noir + bb.js WASM)",
+          "description": "모든 제약조건의 영지식 검증"
+        }
+      },
+      "matrixTitle": "정보 접근 권한 매트릭스",
+      "matrix": {
+        "information": "정보",
+        "observers": {
+          "publicObserver": "공개 관찰자",
+          "recipient": "수신자",
+          "operator": "운영자",
+          "regulator": "규제 기관"
+        },
+        "items": {
+          "txExists": {
+            "label": "거래 존재 여부",
+            "publicObserver": "O",
+            "recipient": "O",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "amount": {
+            "label": "전송 금액",
+            "publicObserver": "O",
+            "recipient": "O",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "senderIdentity": {
+            "label": "송신자 신원",
+            "publicObserver": "X",
+            "recipient": "X",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "recipientIdentity": {
+            "label": "수신자 신원",
+            "publicObserver": "X",
+            "recipient": "O",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "senderAddress": {
+            "label": "송신자 주소",
+            "publicObserver": "X",
+            "recipient": "X",
+            "operator": "O",
+            "regulator": "O"
+          }
+        }
+      },
+      "architectureTitle": "시스템 아키텍처",
+      "architecture": {
+        "client": {
+          "name": "클라이언트 레이어",
+          "description": "SDK와 WASM proving이 통합된 브라우저 기반 프론트엔드",
+          "tags": "Next.js,SDK,bb.js WASM"
+        },
+        "offChain": {
+          "name": "오프체인 인프라",
+          "description": "Merkle 트리 관리, 노트 스캔, 운영자 서비스",
+          "tags": "Merkle Tree,Scanner,Operator"
+        },
+        "onChain": {
+          "name": "On-Chain (EVM)",
+          "description": "입금, 출금, 검증을 위한 스마트 컨트랙트",
+          "tags": "PrivacyPoolV2,HonkVerifier,ERC20"
+        },
+        "circuit": {
+          "name": "ZK Circuit",
+          "description": "6개 제약조건을 가진 영지식 증명 회로",
+          "tags": "6개 제약조건,Poseidon2,31개 테스트"
+        }
+      }
+    },
+    "concepts": {
+      "title": "Why Privacy Pool?",
+      "subtitle": "<paperLink>Privacy Pools 논문</paperLink>과 <eipLink>EIP-5564</eipLink>를 기반으로, Privacy Pool의 프라이버시 해법을 설명합니다.",
+
+      "problem": {
+        "title": "투명성 문제",
+        "desc": "퍼블릭 블록체인에서 모든 전송은 완전히 공개됩니다: 발신자, 수신자, 금액. 블록 익스플로러만 있으면 누가 누구에게 얼마를 보냈는지 누구나 알 수 있습니다. 이것은 버그가 아니라 블록체인의 기본 구조입니다. 하지만 금융 프라이버시는 존재하지 않습니다.",
+        "question": "규제를 준수하면서도 프라이빗하게 전송할 수 있을까?"
+      },
+
+      "locker": {
+        "title": "전송 내역 숨기기",
+        "desc": "전송 내역을 온체인에 그대로 기록하는 대신, Privacy Pool은 이를 하나의 해시값으로 압축합니다. 이 해시를 commitment라고 부릅니다. 해시는 단방향이라 결과값만으로는 원본 데이터를 복원할 수 없습니다. 온체인에는 해시만 남으므로, 관찰자는 입금이 있었다는 사실만 알 뿐 내용은 알 수 없습니다.",
+        "intuition": "물품보관함 건물을 떠올려보세요. 커밋먼트는 잠긴 상자, Merkle 트리는 건물입니다. 관찰자는 상자가 놓인 건 알지만, 안에 뭐가 있는지, 누구를 위한 건지는 알 수 없습니다.",
+        "commitmentTitle": "Commitment",
+        "commitmentDesc": "전송 파라미터(amount, secret, 수신자 키, depositor, block number)의 <poseidonLink>Poseidon2</poseidonLink> 해시. 단방향: 해시만으로는 입력값을 알 수 없습니다.",
+        "commitmentFormula": "commitment = poseidon2(secret, npk, amount, blockNumber, depositor)",
+        "poseidonNote": "왜 Poseidon2인가? ZK 산술 회로에 네이티브한 해시 함수(BN254 필드)로, keccak256 대비 Proving Time ~29배 빠릅니다. Sponge 구조 t=4, rate=3."
+      },
+
+      "merkle": {
+        "title": "익명성 집합",
+        "desc": "커밋먼트는 Merkle 트리에 쌓입니다. 입금이 늘수록 풀이 커지고, 특정 커밋먼트의 주인을 추측하기 어려워집니다. 출금 시에는 \"내 커밋먼트가 이 트리 어딘가에 있다\"는 것만 증명하면 됩니다 — 어디인지는 밝히지 않습니다.",
+        "termTitle": "Merkle Tree",
+        "termDesc": "모든 리프에서 하나의 루트를 만드는 이진 해시 트리. 어떤 리프의 존재를 형제 해시 32개만으로 증명할 수 있습니다 — 나머지 트리를 공개하지 않고.",
+        "specs": "Depth: 32 | 최대 입금: 2³² (~43억) | 증명: 해시 32개 | 삽입: O(log n)"
+      },
+
+      "keyDelivery": {
+        "title": "Secret을 익명으로 전달하기",
+        "naiveDesc": "수신자가 나중에 출금하려면 secret이 필요합니다. 단순하게 수신자의 공개키로 암호화하면 될 것 같지만, 치명적인 문제가 있습니다.",
+        "naiveProblem": "수신자의 공개키가 온체인에 드러나면, 누구든 이 입금이 누구를 위한 것인지 알 수 있습니다. 수신자 프라이버시가 깨집니다.",
+        "solutionIntro": "해결책: 입금마다 일회용 키를 생성하고(stealth address), 이 키로 ECIES 암호화합니다. 온체인에는 일회용 키만 남아 실제 수신자와의 연결고리가 없습니다.",
+        "stealthTitle": "Stealth Address (EIP-5564)",
+        "stealthTermDesc": "<eipLink>EIP-5564</eipLink> 표준. 입금마다 새 임시 키 쌍을 생성하고, 온체인에는 임시 공개키만 기록합니다. 수신자의 실제 키와 임시 키 사이에 온체인 연결이 없으므로 수신자를 특정할 수 없습니다.",
+        "eciesTitle": "ECIES",
+        "eciesTermDesc": "secp256k1 기반 비대칭 암호화. ECDH로 공유 비밀을 만들고, KDF로 확장한 뒤, XOR 암호 + HMAC-SHA256으로 암호화합니다. <eipLink>EIP-5564</eipLink> 스텔스 주소에서 노트 전달에 사용.",
+        "ecdhTitle": "ECDH",
+        "ecdhTermDesc": "키 합의 프로토콜. 두 당사자가 각자의 키 쌍으로 동일한 공유 비밀을 계산합니다. 제3자는 공개 정보만으로 이 비밀을 도출할 수 없습니다.",
+        "ecdhMathTitle": "수학적 원리",
+        "ecdhMathKeys": "Alice (송신자):  개인키 e,  공개키 E = e·G\nBob   (수신자):  개인키 b,  공개키 B = b·G",
+        "ecdhMathKeysDesc": "G는 secp256k1 타원곡선의 생성점 (공개 상수). 공개키에서 개인키를 역산하는 것은 계산적으로 불가능합니다 (이산로그 문제).",
+        "ecdhMathShared": "Alice가 계산:  S = e · B = e·(b·G) = (e·b)·G\nBob이 계산:    S = b · E = b·(e·G) = (b·e)·G",
+        "ecdhMathSharedDesc": "타원곡선 스칼라 곱의 결합법칙에 의해 e·(b·G) = b·(e·G). 양쪽이 동일한 점 S에 도달합니다.",
+        "ecdhMathSecurity": "제3자가 아는 것: E = e·G, B = b·G, G  →  e·b·G를 계산하려면 e 또는 b가 필요하지만 둘 다 역산 불가 (CDH 문제)",
+        "flowTitle": "ECIES 암호화 흐름",
+        "step1": "일회용 임시 키 쌍 생성 (secp256k1)",
+        "step2": "ECDH: ephPrivKey × recipientPubKey → 공유 비밀",
+        "step3": "KDF: keccak256 카운터 모드 → 32B 암호화 키 + 32B HMAC 키",
+        "step4": "XOR 스트림 암호화 + HMAC-SHA256 무결성 태그",
+        "step5": "온체인 페이로드: [ephPubKey(33B) | ciphertext | MAC(32B) | viewTag(1B)]",
+        "kdfDetail": "KDF는 keccak256 카운터 모드: encKey = keccak256(shared || 0x01)[0:32], macKey = keccak256(shared || 0x02)[0:32]. 하나의 ECDH 공유 비밀에서 256비트 키 2개를 생성.",
+        "wireFormat": "Recipient Note: [ephPubKey(33B) | ciphertext(128B) | MAC(32B) | viewTag(1B)] = 194B\nOperator Note:  [ephPubKey(33B) | ciphertext(32B)  | MAC(32B)]             = 97B",
+        "result": "수신자는 ECDH로 동일한 공유 비밀을 계산하여 복호화합니다. 관찰자는 임시 공개키만 볼 수 있고, 이것만으로는 수신자를 특정할 수 없습니다."
+      },
+
+      "noteScanning": {
+        "title": "내 노트 찾기",
+        "desc": "수신자에게 실질적인 문제가 하나 남습니다: 온체인에 수천 개의 암호화 노트가 있는데, 그 중 내 것을 어떻게 찾는가? 전부 복호화하기엔 비용이 큽니다. 1바이트 view tag가 이 문제를 해결합니다.",
+        "viewTagTitle": "View Tag",
+        "viewTagDesc": "keccak256(ECDH 공유 비밀)에서 첫 바이트만 뽑은 1바이트(0–255) 필터. 수신자는 이 1바이트만 비교해서 불일치하면 즉시 건너뜁니다. Monero에서 영감.",
+        "howTitle": "View Tag 동작 원리",
+        "senderSide": "송신자 (생성)",
+        "senderStep1": "shared = ECDH(ephPrivKey, recipientPubKey)",
+        "senderStep2": "viewTag = keccak256(shared)[0]",
+        "senderStep3": "노트 끝에 1바이트 viewTag 부착 → 온체인 기록",
+        "receiverSide": "수신자 (검증)",
+        "receiverStep1": "shared = ECDH(encPrivKey, ephPubKey)",
+        "receiverStep2": "expected = keccak256(shared)[0]",
+        "receiverStep3": "expected ≠ viewTag → 즉시 스킵 (전체 노트의 99.6%)",
+        "flowTitle": "스캐닝 파이프라인",
+        "scanStep1": "시퀀서에서 전체 암호화 노트를 가져온다",
+        "scanStep2": "각 노트의 viewTag와 expected를 비교 — 불일치하면 스킵",
+        "scanStep3": "일치하는 노트만 ECIES 복호화 시도 (HMAC으로 위양성 제거)",
+        "scanStep4": "복호화된 노트에서 secret, amount, depositor 추출 → 출금 입력값",
+        "efficiency": "전체 노트의 99.6%를 복호화 없이 건너뜁니다. N개 노트 중 실제 복호화는 ~N/256개.",
+        "falsePositiveRate": "P(false positive) = 1/256 ≈ 0.39% | 예상 복호화 횟수 = N/256"
+      },
+
+      "checkpoint": {
+        "title": "입금 프라이버시: 완료",
+        "item1": "전송 내역을 Poseidon2 해시(commitment)로 숨김",
+        "item2": "ECIES로 secret 전달 — 수신자와의 온체인 연결 없음",
+        "item3": "스텔스 주소로 수신자 신원 숨김",
+        "item4": "익명성 집합(Merkle 트리)에 커밋먼트 혼합",
+        "item5": "View tag로 수신자가 자기 노트를 빠르게 탐색 (99.6% 스킵)"
+      },
+
+      "withdrawProblem": {
+        "title": "출금 문제",
+        "intuition": "입금은 프라이빗하게 만들었지만, 출금에서 보통 프라이버시가 깨집니다. Bob이 \"42번 입금을 출금하겠다\"고 하면, 누구든 42번 입금자가 누군지 조회할 수 있습니다. 핵심 아이디어: 어떤 입금인지 특정하지 않는 것. 풀 안의 '어떤' 입금을 소유하고 있다고 증명하되, 어떤 건지는 밝히지 않습니다.",
+        "onChainDesc": "모든 입금 이벤트에는 입금자(msg.sender)가 기록됩니다. 특정 입금 인덱스를 지정하는 출금은 발신자-수신자 연결을 즉시 드러냅니다. 영지식 증명은 이를 전체 Merkle 트리에 대한 집합 멤버십 증명으로 바꿉니다.",
+        "transformTitle": "ZK 접근법",
+        "transformDesc": "\"입금 #N을 출금\"이 아니라, \"이 트리의 어떤 커밋먼트의 비밀을 알고 있다 — 어떤 건지는 말하지 않겠다.\" 컨트랙트는 수학을 검증하고 자금을 지급합니다. 어떤 입금이 출금되었는지는 알지 못한 채.",
+        "zkpTitle": "Zero-Knowledge Proof",
+        "zkpTermDesc": "어떤 것이 참이라는 걸 증명하되, 왜 참인지는 밝히지 않는 증명. 검증자는 문장의 유효성만 알 수 있고, 그 뒤의 비밀 데이터에는 접근할 수 없습니다.",
+        "zkpProves": "출금 증명이 확립하는 것:",
+        "prove1": "멤버십: Merkle 트리 안의 어떤 커밋먼트를 소유 (어떤 건지는 비공개)",
+        "prove2": "금액 일치: 출금 금액이 입금 금액과 일치",
+        "prove3": "이중출금 방지: 이 커밋먼트에서 이전 출금 없음 (nullifier로 확인)",
+        "constraintCol": "제약조건",
+        "formulaCol": "수식",
+        "purposeCol": "목적",
+        "c1Name": "NPK 바인딩",
+        "c1Formula": "poseidon2([nsk, DOMAIN_NPK]) == npk",
+        "c1Purpose": "키 소유권",
+        "c2Name": "Merkle 포함",
+        "c2Formula": "merkle_root(commitment, siblings, path) == expected_root",
+        "c2Purpose": "입금 존재 증명",
+        "c3Name": "Nullifier 정합성",
+        "c3Formula": "poseidon2([secret, nsk, DOMAIN_NULLIFIER]) == nullifier",
+        "c3Purpose": "이중지불 방지",
+        "c4Name": "금액 유효성",
+        "c4Formula": "transfer_amount > 0 && transfer_amount <= note_amount",
+        "c4Purpose": "부분 출금",
+        "c5Name": "Compliance Hash",
+        "c5Formula": "poseidon2([depositor, recipient, amount, secret, DOMAIN]) == compliance_hash",
+        "c5Purpose": "규제 바인딩",
+        "c6Name": "Registration",
+        "c6Formula": "merkle_root(npk, reg_siblings, reg_path) == expected_registration_root",
+        "c6Purpose": "KYC 검증",
+        "nullifierTitle": "Nullifier",
+        "nullifierDesc": "커밋먼트의 secret과 소유자의 키에서 도출되는 고유 태그. 컨트랙트가 사용된 nullifier를 추적하여 이중출금을 방지합니다. 핵심: nullifier에서 원본 커밋먼트를 역추적할 수 없습니다.",
+        "nullifierFormula": "nullifier = poseidon2(secret, nsk, DOMAIN_NULLIFIER)",
+        "provingTime": "증명: 데스크톱 ~0.18s, 모바일 ~0.5s (UltraHonk, bb.js WASM, Aztec Noir)",
+        "domainSeparators": "DOMAIN_COMMITMENT=1, DOMAIN_NULLIFIER=2, DOMAIN_MERKLE=3, DOMAIN_COMPLIANCE=4, DOMAIN_NPK=5"
+      },
+
+      "compliance": {
+        "title": "감시 없는 컴플라이언스",
+        "dilemma": "완전한 익명성은 규제 문제를 만듭니다: 불법 거래도 합법 거래만큼 잘 숨겨집니다. 아무도 컴플라이언스를 검증할 수 없는 시스템을 규제 기관이 수용하지 않습니다.",
+        "solutionTitle": "Compliance Hash + Operator",
+        "solutionDesc": "<paperLink>Privacy Pools 논문</paperLink>의 접근법에 따라, 신뢰할 수 있는 Operator만 거래를 검증할 수 있고 일반 대중은 볼 수 없는 선택적 공개 구조를 도입합니다. <poolsLink>0xbow Privacy Pools</poolsLink> 설계를 참고, ZK 증명에 최적화.",
+        "hashTitle": "Compliance Hash",
+        "hashDesc": "입금 시 생성되는 해시로, depositor, recipient, amount, 랜덤 secret을 바인딩합니다. secret이 포함되어 있어 관찰자가 입력값을 추측할 수 없습니다.",
+        "hashFormula": "compliance_hash = poseidon2(depositor, recipient, amount, secret, DOMAIN_COMPLIANCE)",
+        "operatorTitle": "Operator 검증 방법",
+        "operatorStep1": "입금: 송신자가 secret + leafIndex를 Operator 키로 암호화 → 온체인에 Operator Note로 기록",
+        "operatorStep2": "출금: 수신자가 ZK 증명 제출 (compliance_hash 포함)",
+        "operatorStep3": "검증: Operator가 노트 복호화 → secret 복원 → compliance_hash 재계산 → 일치 확인 → 제재 목록 대조",
+        "operatorKnows": "Operator는 입금-출금을 연결할 수 있어 발신자, 수신자, 금액을 모두 알 수 있습니다. 이것은 의도된 설계입니다. 단, Operator는 사용자의 nsk가 없으므로 증명을 위조하거나 자금을 탈취할 수 없습니다.",
+        "accessTitle": "누가 무엇을 아는가",
+        "accessHeaderWho": "주체",
+        "accessHeaderKnows": "알 수 있는 것",
+        "accessHeaderCannot": "알 수 없는 것",
+        "accessObserver": "일반 관찰자",
+        "accessObserverKnows": "입금/출금 발생 사실",
+        "accessObserverCannot": "누가 누구에게, 얼마를",
+        "accessOperator": "Operator",
+        "accessOperatorKnows": "발신자, 수신자, 금액",
+        "accessOperatorCannot": "사용자의 nsk — 증명 위조·자금 탈취 불가",
+        "accessContract": "컨트랙트",
+        "accessContractKnows": "ZK 증명 유효성, nullifier 고유성",
+        "accessContractCannot": "어떤 입금에 대한 출금인지",
+        "threatTitle": "위협 모델",
+        "threatAttackCol": "공격",
+        "threatDefenseCol": "방어",
+        "threatAttack1": "가짜 depositor 삽입",
+        "threatDefense1": "회로가 커밋먼트의 원본 depositor로 계산 → 증명 실패",
+        "threatAttack2": "가짜 recipient 삽입",
+        "threatDefense2": "회로가 온체인 recipient 사용 → 불일치",
+        "threatAttack3": "금액 조작",
+        "threatDefense3": "회로가 실제 금액을 바인딩 → 증명 실패",
+        "threatAttack4": "관찰자 브루트포스",
+        "threatDefense4": "128비트 랜덤 secret 솔트 → 계산적으로 불가능",
+        "trustAssumption": "Operator는 secret을 알지만 사용자의 nsk는 모릅니다. nsk 없이는 키 도출, nullifier 생성, 자금 이동이 불가능합니다. 24시간 타임아웃 폴백이 검열 저항성을 보장합니다."
+      },
+
+      "summary": {
+        "title": "전체 흐름",
+        "depositLabel": "입금",
+        "depositDesc": "전송 내역을 해시(commitment) → Merkle 트리 삽입 → ECIES로 secret 전달 → 스텔스 주소로 수신자 숨김",
+        "withdrawLabel": "출금",
+        "withdrawDesc": "View tag로 노트 탐색 → 복호화 → ZK 증명 생성 → Operator 컴플라이언스 검증 → 자금 수령",
+        "observerConclusion": "일반 관찰자가 아는 것: \"누군가 입금했고, 누군가 출금했다\" — 그뿐.",
+        "operatorConclusion": "Operator가 아는 것: 발신자, 수신자, 금액 — 컴플라이언스 검증 목적으로만."
+      },
+
+      "references": {
+        "title": "참고 문헌",
+        "paper": "<paperLink>Buterin, V., Illum, J., Nadler, M., Schär, F., Soleimani, A. (2023). \"Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium.\"</paperLink>",
+        "eip5564": "<eipLink>EIP-5564: Stealth Addresses</eipLink> — 수신자 익명화를 위한 일회용 주소 생성 표준",
+        "eip191": "<eip191Link>EIP-191: Signed Data Standard</eip191Link> — 키 파생을 위한 서명 메시지 표준",
+        "poseidon2": "<poseidonLink>Grassi, L. et al. (2023). \"Poseidon2: A Faster Version of the Poseidon Hash Function.\"</poseidonLink>",
+        "privacyPools": "<poolsLink>0xbow Privacy Pools</poolsLink> — 참고 구현체",
+        "noir": "<noirLink>Aztec Noir</noirLink> — ZK 회로 작성 언어"
+      }
+    },
+    "protocol": {
+      "title": "Protocol Flow",
+      "subtitle": "키 파생부터 자금 출금까지의 전체 전송 시퀀스",
+      "intro": "Privacy Pool의 전송은 준비(Setup) → 전송(Transfer) → 수령(Claim) 3단계로 구성됩니다. 송금자, 수신자, Sequencer, Operator, 스마트 컨트랙트, ZK Circuit 총 7개 참여자가 관여하며, 각 단계에서 EIP-191 키 파생, Poseidon2 커밋먼트, ECIES 암호화, Merkle 트리 갱신, ZK 증명 생성, 2단계 출금이 순서대로 실행됩니다.",
+      "actorsTitle": "참여자",
+      "actorGroups": {
+        "public": {
+          "label": "공개",
+          "description": "누구나 온체인 활동을 관찰 가능"
+        },
+        "trusted": {
+          "label": "오프체인",
+          "description": "상위 접근 권한을 가진 오프체인 서비스"
+        },
+        "onChain": {
+          "label": "온체인",
+          "description": "스마트 컨트랙트와 ZK 검증"
+        }
+      },
+      "actors": {
+        "alice": {
+          "name": "송금자",
+          "description": "토큰을 입금하고 수신자를 위한 암호화 노트를 생성",
+          "tag": "송신자"
+        },
+        "bob": {
+          "name": "수신자",
+          "description": "노트를 스캔하고 ZK 증명을 생성하여 자금을 출금",
+          "tag": "수신자"
+        },
+        "observer": {
+          "name": "외부 관찰자",
+          "description": "거래 존재는 확인 가능하지만 송수신자를 연결할 수 없음",
+          "tag": "일반 사용자"
+        },
+        "operator": {
+          "name": "Operator",
+          "description": "Operator 노트를 복호화하여 컴플라이언스를 검증하고 출금을 승인",
+          "tag": "컴플라이언스"
+        },
+        "sequencer": {
+          "name": "Sequencer",
+          "description": "Merkle 트리를 관리하고 암호화 노트를 인덱싱하며 루트를 온체인에 제출",
+          "tag": "인프라"
+        },
+        "pool": {
+          "name": "PrivacyPoolV2",
+          "description": "입금된 자금을 보관하고 ZK 검증과 함께 2단계 출금을 강제",
+          "tag": "컨트랙트"
+        },
+        "circuit": {
+          "name": "ZK Circuit",
+          "description": "Merkle 포함, nullifier, compliance hash 등 6개 제약조건을 검증",
+          "tag": "검증"
+        }
+      },
+      "flowTitle": "전송 흐름 요약",
+      "flow": {
+        "setup": {
+          "title": "준비",
+          "description": "양쪽 모두 지갑 서명으로 키를 파생합니다. 수신자가 결제 링크(npk + encPubKey)를 송금자에게 공유합니다.",
+          "actors": "송금자, 수신자"
+        },
+        "transfer": {
+          "title": "전송",
+          "description": "송금자가 Poseidon2 커밋먼트와 ECIES 암호화 노트로 토큰을 입금합니다. Sequencer가 인덱싱하고 Merkle 트리를 갱신합니다.",
+          "actors": "송금자, Sequencer"
+        },
+        "claim": {
+          "title": "수령",
+          "description": "수신자가 노트를 스캔하고 ZK 증명을 생성하여 출금을 요청합니다. Operator가 승인하거나 24h 타임아웃으로 자동 실행됩니다.",
+          "actors": "수신자, Operator"
+        }
+      },
+      "sequenceDiagramTitle": "전송 시퀀스 다이어그램",
+      "sequenceDiagram": {
+        "actors": {
+          "sender": "송금자",
+          "recipient": "수신자",
+          "contract": "Contract",
+          "sequencer": "Sequencer",
+          "operator": "Operator"
+        },
+        "messages": {
+          "m1": "결제 링크 공유 (npk + encPubKey)",
+          "m2": "deposit(commitment, notes)",
+          "m3": "Deposit 이벤트 감지",
+          "m4": "Merkle Tree 갱신 + 루트 제출",
+          "m5": "노트 스캔 요청",
+          "m6": "암호화 노트 반환",
+          "m7": "클라이언트 ZK 증명 생성",
+          "m8": "initiateWithdrawal(proof)",
+          "m9": "Operator Note 복호화 + KYC 검증",
+          "m10": "attestWithdrawal 또는 24h timeout → claimWithdrawal",
+          "m11": "자금 수령"
+        }
+      },
+      "timelineTitle": "7단계 전송 시퀀스",
+      "steps": {
+        "1": {
+          "title": "키 파생",
+          "actor": "송금자 & 수신자",
+          "description": "EIP-191 서명 → 결정적 키 쌍 (nsk, npk, encPubKey)",
+          "detail": "지갑의 personal_sign으로 \"StealthTx Key Derivation v1\" 메시지에 서명하고, keccak256 해시로 시드를 생성합니다. 시드에서 nullifier secret key(nsk), nullifier public key(npk), 암호화 공개키(encPubKey)를 파생합니다. 같은 지갑에서는 항상 동일한 키가 생성되므로 별도 백업이 불필요합니다.",
+          "privacy": "nsk는 기기를 벗어나지 않음"
+        },
+        "2": {
+          "title": "결제 링크",
+          "actor": "수신자 → 송금자",
+          "description": "공개키만 포함 (npk + encPubKey)하여 URL/QR로 공유",
+          "detail": "수신자가 npk와 encPubKey를 포함한 URL 또는 QR 코드를 생성합니다. 공개키만 포함되어 있어 링크가 노출되어도 자금 탈취가 불가능합니다. 송금자는 이 링크에서 수신자의 공개키를 추출하여 암호화 노트를 생성합니다.",
+          "privacy": "링크에 비밀키 미포함"
+        },
+        "3": {
+          "title": "입금",
+          "actor": "송금자",
+          "description": "Poseidon2 커밋먼트 + ECIES 암호화 노트 → 온체인 입금",
+          "detail": "amount, secret, npk, depositor, blockNumber으로 Poseidon2 커밋먼트를 계산합니다. 수신자용 Recipient Note(ECIES 암호화)와 운영자용 Operator Note를 함께 생성하여 PrivacyPoolV2 컨트랙트의 deposit()을 호출합니다.",
+          "privacy": "커밋먼트가 모든 거래 세부정보를 숨김"
+        },
+        "4": {
+          "title": "인덱싱",
+          "actor": "Sequencer",
+          "description": "암호화 노트 저장, Merkle 트리 갱신, 루트 온체인 제출",
+          "detail": "시퀀서가 온체인 Deposit 이벤트를 감지하고 암호화 노트를 저장합니다. 커밋먼트를 Incremental Merkle Tree에 O(log n)으로 삽입하고, 배치 조건(100개 누적 또는 30초 경과) 충족 시 새로운 루트를 온체인에 제출합니다.",
+          "privacy": "시퀀서는 노트를 복호화할 수 없음"
+        },
+        "5": {
+          "title": "노트 스캔",
+          "actor": "수신자 (클라이언트)",
+          "description": "View tag 필터 (99.6% 스킵) → ECIES 로컬 복호화 → OwnedNote[]",
+          "detail": "수신자 클라이언트가 시퀀서에서 암호화 노트 목록을 가져옵니다. View tag 1바이트 비교로 99.6%의 무관한 노트를 빠르게 스킵한 뒤, 매칭된 노트만 ECIES 복호화하여 amount, secret, senderPublicKey를 복원합니다.",
+          "privacy": "개인키는 브라우저를 벗어나지 않음"
+        },
+        "6": {
+          "title": "ZK 증명",
+          "actor": "수신자 (클라이언트)",
+          "description": "6개 제약조건 검증과 함께 UltraHonk 증명 생성",
+          "detail": "시퀀서에서 Merkle proof를 가져오고, nullifier와 compliance hash를 로컬에서 계산합니다. noir_js로 위트니스를 생성한 뒤, UltraHonk 백엔드(bb.js WASM)로 증명을 생성합니다. 데스크톱 ~0.18s, 모바일 ~0.5s로 클라이언트 사이드에서 완료됩니다.",
+          "privacy": "증명은 송신자 정보를 노출하지 않음"
+        },
+        "7": {
+          "title": "2단계 출금",
+          "actor": "수신자 + Operator",
+          "description": "운영자 승인(빠름) 또는 24h 타임아웃(검열 저항)",
+          "detail": "1단계에서 ZK 증명과 compliance hash를 온체인에 제출하여 출금을 요청(initiateWithdrawal)합니다. 2단계에서 운영자가 Operator Note를 복호화하여 KYC 검증 후 즉시 승인(attestWithdrawal)하거나, 24시간 타임아웃 후 누구나 claimWithdrawal을 호출하여 자금을 수령합니다.",
+          "privacy": "Nullifier가 이중 지출 방지"
+        }
+      },
+      "privacyMechanism": "프라이버시 메커니즘",
+      "noteStructureTitle": "암호화 노트 구조",
+      "recipientNote": {
+        "title": "Recipient Note",
+        "fields": {
+          "ephemeralPubKey": "임시 공개키",
+          "ciphertext": "암호문",
+          "mac": "MAC",
+          "viewTag": "View Tag"
+        },
+        "decryptedTitle": "복호화된 내용",
+        "decrypted": {
+          "amount": "amount (전송 금액)",
+          "senderPublicKey": "senderPublicKey (송신자 NPK)",
+          "blindingFactor": "blindingFactor (secret)",
+          "memo": "memo (선택적 메타데이터)"
+        }
+      },
+      "operatorNote": {
+        "title": "Operator Note",
+        "fields": {
+          "ephemeralPubKey": "임시 공개키",
+          "ciphertext": "암호문",
+          "mac": "MAC"
+        },
+        "decryptedTitle": "복호화된 내용",
+        "decrypted": {
+          "secret": "secret (블라인딩 팩터)"
+        },
+        "onChainTitle": "운영자의 연결(link) 능력",
+        "onChainDesc": "depositor(입금 시 msg.sender), amount, recipient(출금 시 공개)는 온체인에 각각 기록되어 누구나 볼 수 있지만, 어떤 입금과 어떤 출금이 연결되는지는 알 수 없습니다. 운영자만이 Operator Note에서 secret을 복원한 뒤 depositor + recipient + amount + secret으로 compliance hash를 재계산하여 특정 입금과 출금의 연결 고리를 검증할 수 있습니다."
+      }
+    },
+    "circuit": {
+      "title": "ZK Circuit",
+      "subtitle": "Poseidon2 기반 영지식 회로, 6개 제약조건",
+      "intro": "ZK 회로는 비밀키, 거래 금액, 송수신자 정보 등 민감 데이터를 일절 노출하지 않으면서 \"이 자금을 인출할 권한이 있다\"는 사실만을 증명합니다. 6개 제약조건이 키 소유권, 예치 존재, 이중지불 방지, 금액 범위, 규제 바인딩, KYC 등록을 한 번의 증명으로 검증하며, 검증자는 증명의 참/거짓만 확인할 뿐 원본 데이터에는 접근할 수 없습니다. Poseidon2 Sponge(t=4, rate=3)를 해시 함수로 사용하여 keccak256 대비 Proving Time 29배, Peak Memory 51배 개선을 달성합니다.",
+      "signatureTitle": "회로 시그니처",
+      "constraintsTitle": "6개 제약조건",
+      "constraintCol": "제약조건",
+      "formulaCol": "수식",
+      "purposeCol": "목적",
+      "c1Name": "NPK 바인딩",
+      "c1Formula": "poseidon2([nsk, DOMAIN_NPK]) == npk",
+      "c1Purpose": "키 소유권",
+      "c2Name": "Merkle 포함",
+      "c2Formula": "merkle_root(commitment, siblings, path) == expected_root",
+      "c2Purpose": "예치 존재 증명",
+      "c3Name": "Nullifier 정합성",
+      "c3Formula": "poseidon2([secret, nsk, DOMAIN_NULLIFIER]) == nullifier",
+      "c3Purpose": "이중지불 방지",
+      "c4Name": "금액 유효성",
+      "c4Formula": "transfer_amount > 0 && transfer_amount <= note_amount",
+      "c4Purpose": "부분 출금 지원",
+      "c5Name": "Compliance Hash",
+      "c5Formula": "poseidon2([depositor, recipient, amount, secret, DOMAIN]) == compliance_hash",
+      "c5Purpose": "브루트포스 방어가 포함된 규제 바인딩",
+      "c6Name": "Registration",
+      "c6Formula": "merkle_root(npk, reg_siblings, reg_path) == expected_registration_root",
+      "c6Purpose": "KYC 기반 NPK 검증",
+      "poseidonTitle": "Poseidon2 Sponge (t=4, rate=3)",
+      "poseidonDesc": "Sponge는 입력을 고정 크기 상태에 흡수(absorb)한 뒤 결과를 압출(squeeze)하는 해시 구조입니다. t=4는 내부 상태가 4개 필드 원소, rate=3은 한 번에 3개를 흡수함을 의미합니다. 유한체 산술 기반이라 ZK 회로에서 네이티브하게 동작하며, 비트 연산 기반인 keccak256 대비 극적인 성능 차이를 만듭니다.",
+      "poseidon": {
+        "functionCol": "함수",
+        "inputsCol": "입력 수",
+        "usageCol": "용도",
+        "hash2Usage": "NPK 도출",
+        "hash3Usage": "Nullifier, Merkle node",
+        "hash5Usage": "Compliance hash (secret salt)",
+        "hash6Usage": "Commitment"
+      },
+      "domainTitle": "도메인 분리자",
+      "domainDesc": "동일한 Poseidon2 해시 함수를 여러 용도(커밋먼트, Nullifier, Merkle 노드 등)로 사용할 때, 서로 다른 용도의 해시 값이 우연히 충돌하지 않도록 각 용도마다 고유한 상수를 입력에 추가합니다.",
+      "perfTitle": "성능 비교",
+      "perfMetricCol": "지표",
+      "perfImprovementCol": "개선"
+    },
+    "contracts": {
+      "title": "Smart Contracts",
+      "subtitle": "PrivacyPoolV2 — Off-chain Poseidon2 Merkle, 2-stage withdrawal",
+      "intro": "PrivacyPoolV2 컨트랙트는 사용자 자금 보관, Merkle root 관리, ZK 증명 검증, 2단계 출금을 처리합니다. Merkle root는 Relayer가 제안하고 Operator가 독립 계산 후 확정하는 Dual-Approval 구조로 단일 지점 조작을 방지합니다. 출금은 운영자 즉시 승인 또는 24시간 타임아웃 자동 실행의 두 경로를 제공하여 검열 저항성을 보장합니다.",
+      "roleFunctionsTitle": "역할별 함수",
+      "roleCol": "역할",
+      "functionCol": "함수",
+      "descriptionCol": "설명",
+      "roleUser": "토큰 예치 + 커밋먼트 큐",
+      "roleRelayerPropose": "오프체인 Poseidon2 root 제안 (Dual-approval 1단계)",
+      "roleRelayerSet": "Relayer 주소 설정",
+      "roleOperatorConfirm": "독립 계산 후 root 확정 (Dual-approval 2단계)",
+      "roleOperatorRegistration": "KYC Registration Tree root 갱신",
+      "roleOperatorAttest": "즉시 승인 → 자금 전송 (2단계a)",
+      "roleAnyoneClaim": "24h 타임아웃 → 자금 전송 (2단계b, 검열 저항)",
+      "stateTitle": "온체인 상태",
+      "stateVarCol": "상태 변수",
+      "stateCommitments": "커밋먼트 큐",
+      "stateKnownRoots": "확정된 Merkle root 목록",
+      "stateCurrentRoot": "최신 확정 root",
+      "statePendingRoot": "제안 대기 중인 root",
+      "stateNullifiers": "사용된 nullifier (이중지불 방지)",
+      "stateRegistrationRoots": "승인된 Registration Tree root 목록",
+      "statePendingWithdrawals": "보류 출금 (recipient, amount, complianceHash, deadline)",
+      "eventsTitle": "이벤트",
+      "dualApprovalTitle": "Dual-Approval Root 메커니즘",
+      "dualApprovalDesc": "Merkle root는 단일 지점 조작을 방지하기 위해 두 독립 주체(Relayer + Operator)의 승인이 필요합니다. Relayer가 제안하고, Operator가 독립 계산 후 확정합니다.",
+      "testsNote": "73개 Foundry 테스트: dual-approval, registration, 2-stage withdrawal 검증"
+    },
+    "sequencer": {
+      "title": "Sequencer",
+      "subtitle": "통합 오프체인 서비스 — Incremental Merkle Tree + Note Scanner + Operator",
+      "intro": "시퀀서는 Tree Manager, Note Scanner, Operator Service 3가지 역할을 하나의 오프체인 서비스로 통합합니다. Incremental Merkle Tree로 O(log n) 삽입과 증명을 지원하고, 암호화 노트를 수집하여 클라이언트 스캔용 원시 데이터를 제공하며, 컴플라이언스 복호화와 KYC 등록을 처리합니다. 배치는 100개 deposit 누적 또는 30초 경과 시 트리거됩니다.",
+      "rolesTitle": "3가지 역할",
+      "roles": {
+        "treeManager": {
+          "title": "Tree Manager",
+          "description": "Incremental Merkle Tree — O(log n) insert/proof"
+        },
+        "noteScanner": {
+          "title": "Note Scanner",
+          "description": "EncryptedNote 수집 + 원시 데이터 제공"
+        },
+        "operatorService": {
+          "title": "Operator Service",
+          "description": "Attestation + compliance 복호화 + 등록"
+        }
+      },
+      "merkle": {
+        "title": "Incremental Merkle Tree",
+        "description": "전체 트리 재구축 O(n·log n)을 O(log n) 삽입으로 대체. Map으로 기본값이 아닌 노드만 저장. Depth 32에 대해 zero hash chain 사전 계산."
+      },
+      "api": {
+        "title": "HTTP API 엔드포인트",
+        "columnMethod": "메서드",
+        "columnEndpoint": "엔드포인트",
+        "columnDescription": "설명",
+        "categories": {
+          "relayerCompatible": "Relayer 호환",
+          "merkle": "Merkle",
+          "noteScanner": "Note Scanner",
+          "registration": "Registration",
+          "operatorPublic": "Operator (공개)",
+          "operatorAuth": "Operator (인증)"
+        },
+        "health": "헬스 체크 + 리프 수",
+        "root": "현재 root + 리프 수 + 마지막 처리 인덱스",
+        "proofLeaf": "리프 인덱스에 대한 Merkle proof",
+        "stats": "트리 통계 (depth, leaves, pending, uptime)",
+        "proofs": "배치 proof 조회",
+        "notes": "범위 내 암호화 노트 (원시 데이터)",
+        "registrationRoot": "Registration Tree 현재 root + 리프 수",
+        "registrationProof": "NPK에 대한 Registration Merkle proof",
+        "operatorPubkey": "Operator ECIES 공개키",
+        "operatorRegister": "KYC 사용자 등록",
+        "operatorUsers": "등록된 사용자 목록",
+        "operatorWithdrawals": "대기 출금 목록",
+        "operatorWithdrawalByNullifier": "특정 출금 상세",
+        "operatorAttest": "Attestation 실행",
+        "operatorDecrypt": "Compliance 복호화"
+      },
+      "batch": {
+        "title": "배치 전략",
+        "countTitle": "개수 트리거",
+        "countDescription": "100개 deposit 누적",
+        "timeTitle": "시간 트리거",
+        "timeDescription": "30초 경과 + 1개 이상 대기"
+      }
+    },
+    "sdk": {
+      "title": "SDK",
+      "subtitle": "브라우저 ZK proving + ethers.js 연동 TypeScript 라이브러리",
+      "intro": "TypeScript SDK는 crypto, keys, merkle, notes, witness, prover, wallet, contracts, sequencer 9개 모듈로 구성됩니다. EIP-1193 서명으로 키를 파생하고, View tag 필터링으로 99.6%의 불필요한 노트를 스킵한 뒤 ECIES 복호화를 수행하며, bb.js WASM 기반 UltraHonk 증명을 브라우저에서 생성합니다. Client API 8개 메서드로 init부터 claimWithdrawal까지 전체 흐름을 커버합니다.",
+      "modulesTitle": "모듈 구조",
+      "modules": {
+        "crypto": "Browser Poseidon2 + ECIES (bb.js WASM)",
+        "keys": "EIP-1193 서명 → 키 파생",
+        "merkle": "Merkle Tree (full build + sparse proof)",
+        "notes": "노트 스캔/복호화 (클라이언트 사이드)",
+        "witness": "noir_js 위트니스 생성",
+        "prover": "UltraHonkBackend 증명 생성",
+        "wallet": "EIP-1193 지갑 연동 (ethers.js v6)",
+        "contracts": "PrivacyPoolV2 + ERC20 인터페이스",
+        "sequencer": "Sequencer REST 클라이언트"
+      },
+      "keyDerivation": {
+        "title": "키 파생 흐름",
+        "step1": "personal_sign(\"StealthTx Key Derivation v1\")",
+        "step2": "keccak256(signature) → seed",
+        "step3": "seed → nsk (mod BN254_FR_ORDER)",
+        "step4": "computeNpk(nsk) → npk",
+        "step5": "secp256k1.getPublicKey(encPrivKey) → encPubKey",
+        "note": "같은 지갑 = 같은 키 (백업 불필요). localStorage에 캐싱."
+      },
+      "noteScanning": {
+        "title": "노트 스캔",
+        "step1": "GET /notes → raw encrypted notes",
+        "step2": "View tag 필터링 (99.6% 스킵)",
+        "step3": "ECIES 복호화 → OwnedNote[]"
+      },
+      "proofPipeline": {
+        "title": "증명 생성 파이프라인",
+        "step1": "시퀀서에서 Merkle proof 가져오기",
+        "step2": "nullifier + complianceHash 계산",
+        "step3": "noir_js → 위트니스 생성",
+        "step4": "UltraHonkBackend → ZK proof",
+        "step5": "initiateWithdrawal tx 제출"
+      },
+      "provingTime": {
+        "title": "예상 증명 시간 (WASM)",
+        "columnDevice": "기기",
+        "columnTime": "시간",
+        "desktop": "데스크톱",
+        "desktopTime": "~0.18s",
+        "mobileLatest": "모바일 (최신)",
+        "mobileLatestTime": "~0.5s",
+        "mobileMidRange": "모바일 (중저가)",
+        "mobileMidRangeTime": "~1.2s"
+      },
+      "clientApi": {
+        "title": "클라이언트 API",
+        "init": "암호화 초기화 (Poseidon2 WASM)",
+        "connect": "EIP-1193 지갑 연결",
+        "deriveKeys": "Privacy Pool 키 쌍 파생",
+        "scanMyNotes": "소유 노트 스캔",
+        "getPrivacyBalance": "프라이버시 잔액 조회",
+        "deposit": "토큰 입금",
+        "withdraw": "ZK 증명으로 출금",
+        "claimWithdrawal": "24h 후 클레임"
+      }
+    },
+    "compliance": {
+      "title": "Compliance",
+      "subtitle": "Privacy Pool이 프라이버시, 규제 준수, 검열 저항을 동시에 달성하는 방법",
+      "intro": "Privacy Pool은 프라이버시(ZK proof + stealth address), 규제 준수(compliance hash + ECIES), 검열 저항(24h timeout fallback) 세 가지 요구사항을 동시에 충족합니다. Compliance hash는 depositor, recipient, amount, secret을 Poseidon2로 바인딩하여 ZK 회로가 무결성을 보장하고, 2단계 출금과 KYC Registration Tree가 운영자 검증과 사용자 보호를 동시에 충족시킵니다.",
+      "requirementsTitle": "세 가지 요구사항",
+      "requirements": {
+        "privacy": {
+          "title": "프라이버시",
+          "description": "공개 관찰자로부터 송수신자 연결 차단",
+          "mechanism": "ZK proof + stealth address"
+        },
+        "regulatory": {
+          "title": "규제 준수",
+          "description": "운영자에게 송수신자·금액 추적 보장",
+          "mechanism": "Compliance hash + ECIES 암호화"
+        },
+        "censorship": {
+          "title": "검열 저항",
+          "description": "운영자 거부/장애 시 자금 인출 보장",
+          "mechanism": "24h timeout fallback"
+        }
+      },
+      "complianceHash": {
+        "title": "Compliance Hash Binding",
+        "formula": "compliance_hash = poseidon2(depositor, recipient, amount, secret, DOMAIN_COMPLIANCE)",
+        "description": "ZK 회로 제약조건 5가 무결성을 보장. depositor, recipient, amount를 변조하면 증명 실패.",
+        "columnAttack": "공격 시나리오",
+        "columnDefense": "방어",
+        "attacks": {
+          "row1": {
+            "attack": "가짜 depositor 삽입",
+            "defense": "회로가 커밋먼트의 원본 depositor로 계산 → 증명 실패"
+          },
+          "row2": {
+            "attack": "가짜 recipient 삽입",
+            "defense": "회로가 public input의 recipient로 계산 → 온체인 값과 불일치"
+          },
+          "row3": {
+            "attack": "금액 조작",
+            "defense": "회로가 실제 transfer_amount로 계산 → 증명 실패"
+          },
+          "row4": {
+            "attack": "외부 관찰자 브루트포스 역산",
+            "defense": "Secret salt → observer는 secret을 모름 → 역산 불가"
+          }
+        }
+      },
+      "withdrawal": {
+        "title": "2-Stage Withdrawal",
+        "stage1": {
+          "label": "1단계: 요청",
+          "description": "ZK 증명 검증 + compliance hash 온체인 기록 + 대기 상태"
+        },
+        "stage2a": {
+          "label": "2단계a: 운영자 승인",
+          "description": "컴플라이언스 검증 후 즉시 자금 지급"
+        },
+        "stage2b": {
+          "label": "2단계b: 24h Timeout",
+          "description": "운영자 미응답 시 자동 실행 (검열 저항)"
+        }
+      },
+      "kycTree": {
+        "title": "KYC Registration Tree",
+        "description": "사용자는 자금을 출금하기 전에 KYC 인증을 완료하고, 자신의 NPK를 운영자에게 제출합니다. 운영자는 인증된 NPK를 Registration Tree(신원 트리)에 등록하여 해당 사용자가 검증된 참여자임을 기록합니다. 출금 시 ZK 회로 제약조건 6이 사용자의 NPK가 신원 트리에 포함되어 있는지 확인하며, 미등록 사용자는 유효한 증명을 생성할 수 없어 출금이 차단됩니다. 이를 통해 프라이버시를 유지하면서도 인증된 사용자만 프로토콜에 참여할 수 있도록 보장합니다."
+      },
+      "visibility": {
+        "title": "정보 가시성 매트릭스",
+        "columnInfo": "정보",
+        "depositor": "입금자",
+        "recipient": "수신자",
+        "operator": "운영자",
+        "public": "공개",
+        "depositAmount": "입금 금액",
+        "withdrawalAmount": "출금 금액",
+        "depositorAddress": "입금자 주소",
+        "recipientStealth": "수신자 스텔스 주소",
+        "secret": "Secret",
+        "link": "입금자 ↔ 수신자 연결",
+        "compliancePreimage": "Compliance hash preimage",
+        "nsk": "NSK (nullifier secret key)",
+        "labels": {
+          "creator": "생성자",
+          "noteDecrypt": "노트 복호화",
+          "operatorNote": "Operator note",
+          "selfOnly": "본인만"
+        }
+      },
+      "verification": {
+        "title": "운영자 검증 절차",
+        "step1": "Operator Note 복호화 — ECIES 복호화 → secret 복원",
+        "step2": "Compliance Hash 검증 — depositor, recipient, amount, secret으로 해시 재계산",
+        "step3": "KYC 확인 — depositor와 recipient NPK 조회, 제재 대상 확인",
+        "step4": "정책 판단 — 적합하면 즉시 승인, 아니면 24시간 후 자동 실행"
+      },
+      "securityNote": "운영자는 송수신자 연결을 알 수 있지만 자금을 탈취할 수 없음 (NSK 미보유). 24h 타임아웃이 검열 저항성을 보장."
+    }
+  },
+  "localeSwitcher": {
+    "en": "EN",
+    "ko": "KO"
+  }
+}

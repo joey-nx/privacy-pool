@@ -1,0 +1,24 @@
+{
+  "network": "CROSS Testnet",
+  "chainId": 612044,
+  "rpcUrl": "https://testnet.crosstoken.io:22001",
+  "deployer": "0x86DB579cB2BB10496D8E0b49b88c3C74EEA67d3c",
+  "deployedAt": "2026-02-27",
+  "contracts": {
+    "HonkVerifier": "0x570c4D44EA758cE72Ba013d29193DA7af0dAA744",
+    "CROSSD": "0x9364ea6790f6E0EcFaa5164085f2a7de34EC55Fb",
+    "PrivacyPoolV2": "0x5fB82D522C4e3471cB2b9578E6f5284Cef8c9a4D"
+  },
+  "roles": {
+    "operator": "0x86DB579cB2BB10496D8E0b49b88c3C74EEA67d3c",
+    "relayer": "0x86DB579cB2BB10496D8E0b49b88c3C74EEA67d3c"
+  },
+  "deployBlock": 22723038,
+  "sequencer": {
+    "port": 3002,
+    "fromBlock": 22723038
+  },
+  "notes": {
+    "token": "CROSSD (18 decimals), pre-existing ERC-20 on CROSS Testnet"
+  }
+}

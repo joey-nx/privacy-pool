@@ -1,0 +1,1036 @@
+{
+  "metadata": {
+    "title": "Private Pool",
+    "description": "Privacy-preserving cryptocurrency transfers powered by Zero-Knowledge Proofs"
+  },
+  "navigation": {
+    "brand": "Private Pool",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "compliance": "Compliance",
+    "app": "App",
+    "docs": "Docs",
+    "toggleTheme": "Toggle theme"
+  },
+  "hero": {
+    "label": "Private Pool Protocol",
+    "heading": "Stealth transfers.",
+    "subheading": "Trusted by Zero-Knowledge Proof.",
+    "launchApp": "Launch App",
+    "readDocs": "Read Documentation"
+  },
+  "features": {
+    "label": "Features",
+    "heading": "A New Standard for\nComplete Anonymity",
+    "headingHighlight": "Complete Anonymity",
+    "zkProofsTitle": "Zero-Knowledge Proofs",
+    "zkProofsDesc": "Verify transactions while completely hiding sender and recipient information using zero-knowledge proof technology.",
+    "untraceableTitle": "Untraceable",
+    "untraceableDesc": "No usage flow is exposed on-chain, making it impossible to trace who sent what to whom.",
+    "gameChainTitle": "Game Chain Optimized",
+    "gameChainDesc": "Optimized for game chains, offering anonymous transactions with fast speed and low fees.",
+    "stealthTitle": "Stealth Addresses",
+    "stealthDesc": "Protects recipient privacy by generating a new disposable address each time."
+  },
+  "howItWorks": {
+    "label": "How It Works",
+    "heading": "Perfect Privacy\nin 4 Steps",
+    "headingHighlight": "Perfect Privacy",
+    "step1Title": "Connect Wallet",
+    "step1Desc": "Connect your game chain wallet to Privacy Pool.",
+    "step2Title": "Deposit Tokens",
+    "step2Desc": "Deposit tokens to the smart contract and receive a secret note.",
+    "step3Title": "Wait",
+    "step3Desc": "Mix with other users' transactions to ensure anonymity.",
+    "step4Title": "Anonymous Withdrawal",
+    "step4Desc": "Complete an untraceable withdrawal to a new address.",
+    "securityTitle": "Security is proven by mathematics",
+    "securityDesc": "ZK-SNARKs technology verifies transaction validity while hiding the contents.",
+    "viewDocs": "View Technical Docs"
+  },
+  "compliance": {
+    "label": "Compliance",
+    "heading": "Privacy for the public,",
+    "headingHighlight": "Transparency for regulators",
+    "subtitle": "",
+    "pillar1Title": "Privacy",
+    "pillar1Subtitle": "Privacy",
+    "pillar1Desc": "Block sender-recipient connection from public observers",
+    "pillar1Mechanism": "ZK proof + stealth address",
+    "pillar2Title": "Regulatory Compliance",
+    "pillar2Subtitle": "Regulatory Compliance",
+    "pillar2Desc": "Ensure sender-recipient and amount tracking for operators",
+    "pillar2Mechanism": "Compliance hash + ECIES encryption",
+    "pillar3Title": "Censorship Resistance",
+    "pillar3Subtitle": "Censorship Resistance",
+    "pillar3Desc": "Guarantee fund withdrawal when operator refuses or fails",
+    "pillar3Mechanism": "24h timeout fallback",
+    "mechanism": "Mechanism",
+    "privacyFirstHeading": "Privacy First",
+    "privacyFirstHighlight": "First",
+    "privacyFirstDesc": "General users cannot know the parties or amounts of transactions.\nOnly regulators can review when necessary, maximizing privacy protection.",
+    "publicObserverTitle": "General User",
+    "publicObserverSubtitle": "Public Observer",
+    "publicLabel1": "Sender",
+    "publicLabel2": "Recipient",
+    "publicLabel3": "Amount",
+    "publicLabel4": "Transaction Link",
+    "publicHidden": "??? ??? ??? ???",
+    "publicUninferable": "Uninferable",
+    "publicNote": "All critical information is encrypted and completely protected from general users.",
+    "operatorTitle": "Regulator",
+    "operatorSubtitle": "Compliance Operator",
+    "operatorValue1": "0x1234...5678",
+    "operatorValue2": "0xabcd...ef00",
+    "operatorValue3": "10.5 ETH",
+    "operatorValue4": "Verifiable",
+    "operatorNote": "Accessible only when necessary, designed so that funds cannot be seized.",
+    "conditionalAccess": "Conditional Access",
+    "keyMessageTitle": "Privacy-First Design",
+    "keyMessageContent": "Core transaction information (sender, recipient, amount) is completely hidden from general users through Zero-Knowledge Proofs and encryption. Regulators can only decrypt this information <highlight>only when compliance verification is needed</highlight>, and even in this process, the design ensures user funds cannot be seized, maximizing privacy protection.",
+    "twoStageHeading": "2-Stage Withdrawal",
+    "stage1Title": "Initiate",
+    "stage1Subtitle": "Withdrawal Request",
+    "stage1Step1": "ZK proof verification",
+    "stage1Step2": "Compliance hash on-chain recording",
+    "stage1Step3": "Register as Pending status",
+    "stage2Title": "Complete",
+    "stage2Subtitle": "Withdrawal Complete",
+    "operatorApproval": "Operator Approval",
+    "operatorApprovalDesc": "Immediate fund release after compliance verification",
+    "timeoutTitle": "24h Timeout",
+    "timeoutDesc": "Auto-execution if operator doesn't respond",
+    "operatorVerificationHeading": "Operator Verification Process",
+    "opStep1Num": "1",
+    "opStep1Title": "Decrypt Operator Note",
+    "opStep1Desc": "Recover secret via ECIES decryption",
+    "opStep2Num": "2",
+    "opStep2Title": "Verify Compliance Hash",
+    "opStep2Desc": "Recalculate hash with depositor, recipient, amount, secret",
+    "opStep3Num": "3",
+    "opStep3Title": "KYC Check",
+    "opStep3Desc": "Look up depositor and recipient NPK and check sanctions",
+    "opStep4Num": "4",
+    "opStep4Title": "Policy Decision",
+    "opStep4Desc": "Approve immediately if compliant, otherwise 24h timeout",
+    "securityGuaranteeTitle": "Security Guarantee",
+    "securityGuaranteeNote": "The operator can know the sender-recipient connection, but cannot seize funds as they don't hold the NSK (nullifier secret key). Additionally, the 24-hour timeout mechanism guarantees censorship resistance."
+  },
+  "footer": {
+    "brand": "Private Pool",
+    "description": "Privacy-preserving cryptocurrency transfers powered by Zero-Knowledge Proofs.",
+    "product": "PRODUCT",
+    "resources": "RESOURCES",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "compliance": "Compliance",
+    "documentation": "Documentation",
+    "github": "GitHub",
+    "copyright": "\u00a9 2026 Private Pool. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "disclaimer": "Private Pool is an experimental protocol. Illegal use is prohibited. Users are responsible for complying with the laws of their jurisdiction."
+  },
+  "app": {
+    "brand": "Private Pool",
+    "connecting": "Connecting...",
+    "metamask": "MetaMask",
+    "wrongNetwork": "Wrong Network",
+    "connectedWallet": "Connected Wallet",
+    "network": "Network",
+    "unknownNetwork": "Unknown ({chainId})",
+    "disconnectWallet": "Disconnect Wallet",
+    "connectHeading": "Connect Your Wallet",
+    "connectDescription": "Connect your wallet to start using Private Pool",
+    "connectButton": "Connect MetaMask",
+    "noMetamask": "Don't have MetaMask?",
+    "downloadHere": "Download here",
+    "wrongNetworkTitle": "Wrong Network",
+    "wrongNetworkDesc": "Please switch to {chainName} to use this app.",
+    "switchNetwork": "Switch Network",
+    "tabReceive": "Receive",
+    "tabSend": "Send",
+    "tabHistory": "History"
+  },
+  "send": {
+    "title": "Send Privately",
+    "description": "Paste the recipient's payment link to send funds via Zero-Knowledge Proof.",
+    "recipientLabel": "Recipient Payment Link",
+    "placeholder": "https://app.latent.com/pay?npk=...&enc=...",
+    "amountLabel": "Amount",
+    "insufficientBalance": "Insufficient {symbol} balance",
+    "sendButton": "Send",
+    "processing": "Processing...",
+    "stepPrepare": "Preparing deposit",
+    "stepEncrypt": "Encrypting notes",
+    "stepApprove": "Approving token transfer",
+    "stepSubmit": "Submitting transaction",
+    "stepConfirm": "Waiting for confirmation"
+  },
+  "sendSuccess": {
+    "title": "Transfer Complete",
+    "done": "Done"
+  },
+  "receive": {
+    "titleWithLink": "Your Payment Link",
+    "titleWithoutLink": "Generate Payment Link",
+    "descWithLink": "Share this link with anyone who wants to send you funds privately. Your link is reusable and safe to share publicly.",
+    "descWithoutLink": "Create your unique payment link containing your npk and encryption public key. Share this link with anyone who wants to send you funds privately.",
+    "generateButton": "Generate Payment Link",
+    "generatingKeys": "Generating Keys...",
+    "copy": "Copy",
+    "copied": "Copied",
+    "qrCode": "QR Code",
+    "share": "Share",
+    "shareMessage": "Send me crypto privately via Private Pool\n\nPrivacy · Secure · Zero-Knowledge Proof",
+    "reusableInfo": "This link is reusable and safe to share publicly",
+    "qrTitle": "Payment QR Code",
+    "qrScanText": "Scan to receive your payment link"
+  },
+  "receivedFunds": {
+    "title": "Received Funds",
+    "scanButton": "Scan for Notes",
+    "scanning": "Scanning...",
+    "emptyState": "No received notes found. Click \"Scan for Notes\" to check for incoming funds.",
+    "withdrawn": "Withdrawn",
+    "completed": "Completed",
+    "withdraw": "Withdraw",
+    "justNow": "Just now",
+    "minutesAgo": "{count}m ago",
+    "hoursAgo": "{count}h ago",
+    "daysAgo": "{count}d ago"
+  },
+  "withdrawal": {
+    "failed": "Withdrawal Failed",
+    "complete": "Withdrawal Complete",
+    "withdrawing": "Withdrawing...",
+    "noteCounter": "Note {index}/{total}",
+    "stepMerkle": "Fetching Merkle proof",
+    "stepCompute": "Computing circuit inputs",
+    "stepWitness": "Generating witness",
+    "stepProve": "Generating ZK proof",
+    "stepSubmit": "Submitting transaction",
+    "successMessage": "{count} {symbol} withdrawal(s) complete",
+    "close": "Close",
+    "done": "Done"
+  },
+  "history": {
+    "title": "Transaction History",
+    "description": "View all your send and withdrawal transactions.",
+    "loading": "Loading transaction history...",
+    "emptyHeading": "No transaction history yet.",
+    "emptyText": "Your transactions will appear here after you send or withdraw funds.",
+    "sent": "Sent",
+    "withdrawn": "Withdrawn",
+    "completed": "Completed",
+    "pending": "Pending"
+  },
+  "docs": {
+    "hero": {
+      "label": "Technical Documentation",
+      "heading": "Protocol Architecture",
+      "description": "A complete technical guide to understanding and integrating the Privacy Pool protocol — from ZK circuits to SDK integration."
+    },
+    "sidebar": {
+      "overview": "Overview",
+      "concepts": "Why Privacy Pool?",
+      "protocol": "Protocol Flow",
+      "circuit": "ZK Circuit",
+      "contracts": "Smart Contracts",
+      "sequencer": "Sequencer",
+      "sdk": "SDK",
+      "compliance": "Compliance"
+    },
+    "overview": {
+      "title": "Overview",
+      "intro1": "Privacy Pool is a protocol that tackles privacy and regulatory compliance at the same time. Using ZK circuits, stealth addresses, and encrypted notes, it hides transaction details from public observers while selectively disclosing necessary information to regulators.",
+      "intro2": "This documentation covers everything you need to understand and work with Privacy Pool — from the end-to-end protocol flow and ZK circuit design to smart contracts, the sequencer, and SDK integration.",
+      "intro3": "The protocol is designed based on the paper <paperLink>Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium</paperLink>, the <eipLink>EIP-5564 Stealth Address</eipLink> standard, and the <poolsLink>Privacy Pools</poolsLink> project by 0xbow, optimized for zero-knowledge proof compatibility. ZK circuits are written in <noirLink>Aztec Noir</noirLink>, enabling client-side proving ensuring sensitive user data is processed securely without ever leaving the user's device.",
+      "comparisonTitle": "How Privacy Pool Differs",
+      "comparison": {
+        "labels": {
+          "privacy": "Privacy",
+          "compliance": "Compliance",
+          "traceability": "Traceability"
+        },
+        "traditional": {
+          "name": "Traditional Blockchain",
+          "privacy": "All transactions public",
+          "compliance": "Full transparency",
+          "traceability": "Fully traceable"
+        },
+        "tornado": {
+          "name": "Tornado Cash",
+          "privacy": "Fully anonymous",
+          "compliance": "No compliance → OFAC sanctioned",
+          "traceability": "Untraceable"
+        },
+        "latent": {
+          "name": "Privacy Pool",
+          "privacy": "Conditional privacy",
+          "compliance": "Compliance hash + ECIES",
+          "traceability": "Operator-only traceability"
+        }
+      },
+      "layersTitle": "4-Layer Mechanism",
+      "layers": {
+        "stealthAddress": {
+          "name": "Stealth Address",
+          "tech": "ECIES (secp256k1 ECDH)",
+          "description": "Recipient anonymization via one-time stealth addresses"
+        },
+        "encryptedNote": {
+          "name": "Encrypted Note",
+          "tech": "ECIES encryption + View Tag",
+          "description": "Secure note delivery with efficient scanning"
+        },
+        "privacyPool": {
+          "name": "Privacy Pool",
+          "tech": "Poseidon2 Merkle + ZK Proof",
+          "description": "Sender anonymization via commitment pool"
+        },
+        "zkProof": {
+          "name": "ZK Proof",
+          "tech": "UltraHonk (Noir + bb.js WASM)",
+          "description": "Zero-knowledge verification of all constraints"
+        }
+      },
+      "matrixTitle": "Information Access Matrix",
+      "matrix": {
+        "information": "Information",
+        "observers": {
+          "publicObserver": "Public Observer",
+          "recipient": "Recipient",
+          "operator": "Operator",
+          "regulator": "Regulator"
+        },
+        "items": {
+          "txExists": {
+            "label": "Transaction Exists",
+            "publicObserver": "O",
+            "recipient": "O",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "amount": {
+            "label": "Transfer Amount",
+            "publicObserver": "O",
+            "recipient": "O",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "senderIdentity": {
+            "label": "Sender Identity",
+            "publicObserver": "X",
+            "recipient": "X",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "recipientIdentity": {
+            "label": "Recipient Identity",
+            "publicObserver": "X",
+            "recipient": "O",
+            "operator": "O",
+            "regulator": "O"
+          },
+          "senderAddress": {
+            "label": "Sender Address",
+            "publicObserver": "X",
+            "recipient": "X",
+            "operator": "O",
+            "regulator": "O"
+          }
+        }
+      },
+      "architectureTitle": "System Architecture",
+      "architecture": {
+        "client": {
+          "name": "Client Layer",
+          "description": "Browser-based frontend with integrated SDK and WASM proving",
+          "tags": "Next.js,SDK,bb.js WASM"
+        },
+        "offChain": {
+          "name": "Off-Chain Infrastructure",
+          "description": "Merkle tree management, note scanning, and operator services",
+          "tags": "Merkle Tree,Scanner,Operator"
+        },
+        "onChain": {
+          "name": "On-Chain (EVM)",
+          "description": "Smart contracts for deposits, withdrawals, and verification",
+          "tags": "PrivacyPoolV2,HonkVerifier,ERC20"
+        },
+        "circuit": {
+          "name": "ZK Circuit",
+          "description": "Zero-knowledge proof circuit with 6 constraints",
+          "tags": "6 Constraints,Poseidon2,31 tests"
+        }
+      }
+    },
+    "concepts": {
+      "title": "Why Privacy Pool?",
+      "subtitle": "How Privacy Pool solves blockchain privacy — built on the <paperLink>Privacy Pools paper</paperLink> and <eipLink>EIP-5564</eipLink>.",
+
+      "problem": {
+        "title": "The Transparency Problem",
+        "desc": "On a public blockchain, every transfer is fully visible: sender, recipient, and amount. Anyone with a block explorer can reconstruct who paid whom. This isn't a bug — it's how blockchains work. But it means financial privacy doesn't exist.",
+        "question": "Can we transfer tokens privately — while staying compliant with regulations?"
+      },
+
+      "locker": {
+        "title": "Hiding the Transfer",
+        "desc": "Instead of recording transfer details on-chain, Privacy Pool hashes them into a single value called a commitment. The hash is one-way — you can't reverse it to see the original data. On-chain, only the hash appears: observers know a deposit happened, but not what's inside.",
+        "intuition": "Think of it as a numbered locker in a large building. The commitment is the locked box; the Merkle tree is the building. An observer knows a box was placed, but can't see what's inside or who it's for.",
+        "commitmentTitle": "Commitment",
+        "commitmentDesc": "A <poseidonLink>Poseidon2</poseidonLink> hash of the transaction parameters (amount, secret, recipient key, depositor, block number). One-way: the hash reveals nothing about the inputs.",
+        "commitmentFormula": "commitment = poseidon2(secret, npk, amount, blockNumber, depositor)",
+        "poseidonNote": "Why Poseidon2? It's native to ZK arithmetic circuits (BN254 field), yielding ~29x faster proving than keccak256. Sponge construction with t=4, rate=3."
+      },
+
+      "merkle": {
+        "title": "The Anonymity Set",
+        "desc": "Commitments accumulate in a Merkle tree — a shared pool that grows with every deposit. The larger the pool, the harder it is to guess which commitment belongs to whom. At withdrawal, a user proves their commitment is somewhere in the tree — without revealing where.",
+        "termTitle": "Merkle Tree",
+        "termDesc": "A binary hash tree that produces a single root from all its leaves. Any leaf's membership can be proven with just 32 sibling hashes — without revealing the rest of the tree.",
+        "specs": "Depth: 32 | Max deposits: 2³² (~4.3B) | Proof: 32 hashes | Insert: O(log n)"
+      },
+
+      "keyDelivery": {
+        "title": "Delivering the Secret Anonymously",
+        "naiveDesc": "The recipient needs the secret to withdraw later. The obvious approach — encrypt it to their public key — has a fatal flaw.",
+        "naiveProblem": "If the recipient's public key appears on-chain, anyone can link the deposit to them. Recipient privacy is broken.",
+        "solutionIntro": "The fix: use a one-time throwaway key per deposit (stealth address), and encrypt with it via ECIES. On-chain, only this ephemeral key appears — no link to the real recipient.",
+        "stealthTitle": "Stealth Address (EIP-5564)",
+        "stealthTermDesc": "Per <eipLink>EIP-5564</eipLink>: generate a fresh ephemeral key pair for each deposit. Only the ephemeral public key goes on-chain. No on-chain link to the recipient's real key — observers can't identify who the deposit is for.",
+        "eciesTitle": "ECIES",
+        "eciesTermDesc": "Elliptic Curve Integrated Encryption Scheme over secp256k1. Derives a shared secret via ECDH, expands it with a KDF, then encrypts with XOR cipher + HMAC-SHA256. Used in <eipLink>EIP-5564</eipLink> for encrypted note delivery.",
+        "ecdhTitle": "ECDH",
+        "ecdhTermDesc": "Key agreement protocol: two parties compute the same shared secret from their own key pairs. No third party can derive the shared secret from public data.",
+        "ecdhMathTitle": "Mathematical Principle",
+        "ecdhMathKeys": "Alice (sender):  privKey e,  pubKey E = e·G\nBob   (receiver): privKey b,  pubKey B = b·G",
+        "ecdhMathKeysDesc": "G is the generator point of the secp256k1 elliptic curve (public constant). Deriving a private key from a public key is computationally infeasible (discrete logarithm problem).",
+        "ecdhMathShared": "Alice computes:  S = e · B = e·(b·G) = (e·b)·G\nBob computes:    S = b · E = b·(e·G) = (b·e)·G",
+        "ecdhMathSharedDesc": "By the associativity of elliptic curve scalar multiplication, e·(b·G) = b·(e·G). Both parties arrive at the same point S.",
+        "ecdhMathSecurity": "Third party knows: E = e·G, B = b·G, G  →  Computing e·b·G requires e or b, but neither can be derived (CDH problem)",
+        "flowTitle": "ECIES Encryption Flow",
+        "step1": "Generate a one-time ephemeral key pair (secp256k1)",
+        "step2": "ECDH: ephPrivKey × recipientPubKey → shared secret",
+        "step3": "KDF: keccak256 counter-mode → 32B encryption key + 32B HMAC key",
+        "step4": "XOR stream cipher + HMAC-SHA256 integrity tag",
+        "step5": "On-chain payload: [ephPubKey(33B) | ciphertext | MAC(32B) | viewTag(1B)]",
+        "kdfDetail": "KDF uses keccak256 counter mode: encKey = keccak256(shared || 0x01)[0:32], macKey = keccak256(shared || 0x02)[0:32]. Two independent 256-bit keys from one ECDH shared secret.",
+        "wireFormat": "Recipient Note: [ephPubKey(33B) | ciphertext(128B) | MAC(32B) | viewTag(1B)] = 194B\nOperator Note:  [ephPubKey(33B) | ciphertext(32B)  | MAC(32B)]             = 97B",
+        "result": "The recipient computes the same shared secret via ECDH and decrypts. Observers see only the ephemeral key — unlinkable to any identity."
+      },
+
+      "noteScanning": {
+        "title": "Finding Your Notes",
+        "desc": "The recipient now faces a practical problem: thousands of encrypted notes exist on-chain, and they need to find theirs. Decrypting every one is too expensive. A 1-byte view tag solves this.",
+        "viewTagTitle": "View Tag",
+        "viewTagDesc": "A 1-byte filter (0–255) derived from keccak256(ECDH shared secret). Recipients compare this single byte before attempting full decryption — mismatches are skipped instantly. Inspired by Monero.",
+        "howTitle": "How View Tags Work",
+        "senderSide": "Sender (Generation)",
+        "senderStep1": "shared = ECDH(ephPrivKey, recipientPubKey)",
+        "senderStep2": "viewTag = keccak256(shared)[0]",
+        "senderStep3": "Append 1-byte viewTag to note → emit on-chain",
+        "receiverSide": "Recipient (Verification)",
+        "receiverStep1": "shared = ECDH(encPrivKey, ephPubKey)",
+        "receiverStep2": "expected = keccak256(shared)[0]",
+        "receiverStep3": "expected ≠ viewTag → skip immediately (99.6% of notes)",
+        "flowTitle": "Scanning Pipeline",
+        "scanStep1": "Fetch all encrypted notes from the sequencer",
+        "scanStep2": "Compare each note's viewTag against expected — skip on mismatch",
+        "scanStep3": "Attempt ECIES decryption only for matches (HMAC catches false positives)",
+        "scanStep4": "Decrypted notes yield secret, amount, depositor → inputs for withdrawal",
+        "efficiency": "99.6% of notes are skipped without decryption. For N notes, only ~N/256 require full decryption.",
+        "falsePositiveRate": "P(false positive) = 1/256 ≈ 0.39% | Expected decryptions = N/256"
+      },
+
+      "checkpoint": {
+        "title": "Deposit Privacy: Complete",
+        "item1": "Transfer details hidden in a Poseidon2 commitment",
+        "item2": "Secret delivered via ECIES — no on-chain link to recipient",
+        "item3": "Stealth address hides recipient identity",
+        "item4": "Commitment mixed into the anonymity set (Merkle tree)",
+        "item5": "Recipient finds their notes via view tag (99.6% skip rate)"
+      },
+
+      "withdrawProblem": {
+        "title": "The Withdrawal Problem",
+        "intuition": "Deposits are private — but withdrawal is where privacy usually breaks. If Bob says \"I want deposit #42,\" anyone can look up who made that deposit. The key insight: don't specify which deposit. Instead, prove you own some deposit in the pool without saying which one.",
+        "onChainDesc": "Every deposit event records the depositor (msg.sender). A withdrawal referencing a specific deposit index would expose the sender-recipient link. Zero-knowledge proofs eliminate this by proving set membership over the entire Merkle tree.",
+        "transformTitle": "The ZK Approach",
+        "transformDesc": "Instead of \"withdraw deposit #N,\" the prover says \"I know the secret behind some commitment in this tree — I won't say which.\" The contract verifies the math and releases funds, learning nothing about which deposit was claimed.",
+        "zkpTitle": "Zero-Knowledge Proof",
+        "zkpTermDesc": "A proof that convinces a verifier something is true without revealing why. The verifier learns the statement is valid — nothing about the secret data behind it.",
+        "zkpProves": "The withdrawal proof establishes:",
+        "prove1": "Membership: the prover owns a commitment in the Merkle tree (which one is hidden)",
+        "prove2": "Correct amount: the withdrawal amount matches what was deposited",
+        "prove3": "No double-spend: this commitment hasn't been withdrawn before (via nullifier)",
+        "constraintCol": "Constraint",
+        "formulaCol": "Formula",
+        "purposeCol": "Purpose",
+        "c1Name": "NPK Binding",
+        "c1Formula": "poseidon2([nsk, DOMAIN_NPK]) == npk",
+        "c1Purpose": "Key ownership",
+        "c2Name": "Merkle Inclusion",
+        "c2Formula": "merkle_root(commitment, siblings, path) == expected_root",
+        "c2Purpose": "Deposit existence",
+        "c3Name": "Nullifier Integrity",
+        "c3Formula": "poseidon2([secret, nsk, DOMAIN_NULLIFIER]) == nullifier",
+        "c3Purpose": "Double-spend prevention",
+        "c4Name": "Amount Validity",
+        "c4Formula": "transfer_amount > 0 && transfer_amount <= note_amount",
+        "c4Purpose": "Partial withdrawal",
+        "c5Name": "Compliance Hash",
+        "c5Formula": "poseidon2([depositor, recipient, amount, secret, DOMAIN]) == compliance_hash",
+        "c5Purpose": "Regulatory binding",
+        "c6Name": "Registration",
+        "c6Formula": "merkle_root(npk, reg_siblings, reg_path) == expected_registration_root",
+        "c6Purpose": "KYC verification",
+        "nullifierTitle": "Nullifier",
+        "nullifierDesc": "A unique tag derived from the commitment's secret and the owner's key. The contract tracks used nullifiers to prevent double-withdrawal. Crucially, a nullifier can't be traced back to its source commitment.",
+        "nullifierFormula": "nullifier = poseidon2(secret, nsk, DOMAIN_NULLIFIER)",
+        "provingTime": "Proving: ~0.18s desktop, ~0.5s mobile (UltraHonk, bb.js WASM, Aztec Noir)",
+        "domainSeparators": "DOMAIN_COMMITMENT=1, DOMAIN_NULLIFIER=2, DOMAIN_MERKLE=3, DOMAIN_COMPLIANCE=4, DOMAIN_NPK=5"
+      },
+
+      "compliance": {
+        "title": "Compliance Without Surveillance",
+        "dilemma": "Full anonymity creates a regulatory problem: it shields illegal activity just as well as legitimate transactions. Regulators won't accept a system where no one can verify compliance.",
+        "solutionTitle": "Compliance Hash + Operator",
+        "solutionDesc": "Following the <paperLink>Privacy Pools paper</paperLink>, the protocol introduces selective disclosure: a trusted Operator can verify transactions, but the public cannot. Based on the <poolsLink>0xbow Privacy Pools</poolsLink> design, optimized for ZK proofs.",
+        "hashTitle": "Compliance Hash",
+        "hashDesc": "A hash generated at deposit time that binds depositor, recipient, amount, and a random secret. The secret prevents brute-force reversal — observers can't guess the inputs.",
+        "hashFormula": "compliance_hash = poseidon2(depositor, recipient, amount, secret, DOMAIN_COMPLIANCE)",
+        "operatorTitle": "How the Operator Verifies",
+        "operatorStep1": "Deposit: sender encrypts secret + leafIndex to the Operator's key → stored on-chain as Operator Note",
+        "operatorStep2": "Withdrawal: recipient submits ZK proof (includes compliance_hash)",
+        "operatorStep3": "Verification: Operator decrypts note → recovers secret → recomputes compliance_hash → checks match → runs sanctions check",
+        "operatorKnows": "The Operator can link deposits to withdrawals — knowing sender, recipient, and amount. This is by design. However, the Operator cannot move funds: they lack the user's nullifier secret key (nsk), so they can't forge proofs or create valid nullifiers.",
+        "accessTitle": "Who Knows What",
+        "accessHeaderWho": "Entity",
+        "accessHeaderKnows": "Can Know",
+        "accessHeaderCannot": "Cannot Know",
+        "accessObserver": "Public",
+        "accessObserverKnows": "That deposits/withdrawals happened",
+        "accessObserverCannot": "Who sent to whom, how much",
+        "accessOperator": "Operator",
+        "accessOperatorKnows": "Sender, recipient, amount",
+        "accessOperatorCannot": "User's nsk — can't forge proofs or seize funds",
+        "accessContract": "Contract",
+        "accessContractKnows": "ZK proof validity, nullifier uniqueness",
+        "accessContractCannot": "Which deposit a withdrawal corresponds to",
+        "threatTitle": "Threat Model",
+        "threatAttackCol": "Attack",
+        "threatDefenseCol": "Defense",
+        "threatAttack1": "Fake depositor",
+        "threatDefense1": "Circuit uses original depositor from commitment → proof fails",
+        "threatAttack2": "Fake recipient",
+        "threatDefense2": "Circuit uses on-chain recipient → mismatch",
+        "threatAttack3": "Amount manipulation",
+        "threatDefense3": "Circuit binds actual amount → proof fails",
+        "threatAttack4": "Brute-force by observer",
+        "threatDefense4": "128-bit random secret salt → computationally infeasible",
+        "trustAssumption": "The Operator knows the secret but not the user's nsk. Without nsk, they can't derive keys, generate nullifiers, or move funds. The 24h timeout fallback guarantees censorship resistance."
+      },
+
+      "summary": {
+        "title": "The Complete Picture",
+        "depositLabel": "Deposit",
+        "depositDesc": "Hash transfer details into commitment → insert into Merkle tree → deliver secret via ECIES → hide recipient with stealth address",
+        "withdrawLabel": "Withdraw",
+        "withdrawDesc": "Find notes via view tag → decrypt → generate ZK proof → Operator checks compliance → receive funds",
+        "observerConclusion": "Public observers see: \"someone deposited, someone withdrew\" — nothing more.",
+        "operatorConclusion": "Operator sees: sender, recipient, amount — for compliance only."
+      },
+
+      "references": {
+        "title": "References",
+        "paper": "<paperLink>Buterin, V., Illum, J., Nadler, M., Schär, F., Soleimani, A. (2023). \"Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium.\"</paperLink>",
+        "eip5564": "<eipLink>EIP-5564: Stealth Addresses</eipLink> — One-time address generation standard for recipient anonymization",
+        "eip191": "<eip191Link>EIP-191: Signed Data Standard</eip191Link> — Signed message standard for key derivation",
+        "poseidon2": "<poseidonLink>Grassi, L. et al. (2023). \"Poseidon2: A Faster Version of the Poseidon Hash Function.\"</poseidonLink>",
+        "privacyPools": "<poolsLink>0xbow Privacy Pools</poolsLink> — Reference implementation",
+        "noir": "<noirLink>Aztec Noir</noirLink> — ZK circuit programming language"
+      }
+    },
+    "protocol": {
+      "title": "Protocol Flow",
+      "subtitle": "Complete transfer sequence from key derivation to fund withdrawal",
+      "intro": "A Privacy Pool transfer follows three phases: Setup → Transfer → Claim. Seven participants are involved — sender, recipient, sequencer, operator, smart contract, ZK circuit, and external observer. Each phase executes EIP-191 key derivation, Poseidon2 commitment, ECIES encryption, Merkle tree update, ZK proof generation, and 2-stage withdrawal in sequence.",
+      "actorsTitle": "Participants",
+      "actorGroups": {
+        "public": {
+          "label": "Public",
+          "description": "Anyone can observe on-chain activity"
+        },
+        "trusted": {
+          "label": "Trusted",
+          "description": "Off-chain services with elevated access"
+        },
+        "onChain": {
+          "label": "On-Chain",
+          "description": "Smart contracts and ZK verification"
+        }
+      },
+      "actors": {
+        "alice": {
+          "name": "Sender",
+          "description": "Deposits tokens and creates encrypted notes for the recipient",
+          "tag": "Sender"
+        },
+        "bob": {
+          "name": "Recipient",
+          "description": "Scans notes, generates ZK proofs, and withdraws funds",
+          "tag": "Recipient"
+        },
+        "observer": {
+          "name": "External Observer",
+          "description": "Can see transactions exist but cannot link sender to recipient",
+          "tag": "General User"
+        },
+        "operator": {
+          "name": "Operator",
+          "description": "Verifies compliance by decrypting operator notes and approving withdrawals",
+          "tag": "Compliance"
+        },
+        "sequencer": {
+          "name": "Sequencer",
+          "description": "Manages Merkle tree, indexes encrypted notes, and relays roots on-chain",
+          "tag": "Infrastructure"
+        },
+        "pool": {
+          "name": "PrivacyPoolV2",
+          "description": "Holds deposited funds and enforces 2-stage withdrawal with ZK verification",
+          "tag": "Contract"
+        },
+        "circuit": {
+          "name": "ZK Circuit",
+          "description": "Verifies 6 constraints including Merkle inclusion, nullifier, and compliance hash",
+          "tag": "Verification"
+        }
+      },
+      "flowTitle": "Transfer at a Glance",
+      "flow": {
+        "setup": {
+          "title": "Setup",
+          "description": "Both parties derive keys from wallet signatures. The recipient shares their payment link (npk + encPubKey) with the sender.",
+          "actors": "Sender, Recipient"
+        },
+        "transfer": {
+          "title": "Transfer",
+          "description": "The sender deposits tokens with a Poseidon2 commitment and ECIES-encrypted notes. Sequencer indexes and updates the Merkle tree.",
+          "actors": "Sender, Sequencer"
+        },
+        "claim": {
+          "title": "Claim",
+          "description": "The recipient scans notes, generates a ZK proof, and initiates withdrawal. Operator approves or 24h timeout auto-executes.",
+          "actors": "Recipient, Operator"
+        }
+      },
+      "sequenceDiagramTitle": "Transfer Sequence Diagram",
+      "sequenceDiagram": {
+        "actors": {
+          "sender": "Sender",
+          "recipient": "Recipient",
+          "contract": "Contract",
+          "sequencer": "Sequencer",
+          "operator": "Operator"
+        },
+        "messages": {
+          "m1": "Share payment link (npk + encPubKey)",
+          "m2": "deposit(commitment, notes)",
+          "m3": "Detect Deposit event",
+          "m4": "Update Merkle Tree + submit root",
+          "m5": "Request note scan",
+          "m6": "Return encrypted notes",
+          "m7": "Client-side ZK proof generation",
+          "m8": "initiateWithdrawal(proof)",
+          "m9": "Decrypt Operator Note + KYC verification",
+          "m10": "attestWithdrawal or 24h timeout → claimWithdrawal",
+          "m11": "Funds received"
+        }
+      },
+      "timelineTitle": "7-Step Transfer Sequence",
+      "steps": {
+        "1": {
+          "title": "Key Derivation",
+          "actor": "Sender & Recipient",
+          "description": "EIP-191 signature → deterministic key pair (nsk, npk, encPubKey)",
+          "detail": "The wallet signs the message \"StealthTx Key Derivation v1\" via personal_sign, then generates a seed from the keccak256 hash. From the seed, the nullifier secret key (nsk), nullifier public key (npk), and encryption public key (encPubKey) are derived. The same wallet always produces the same keys, so no separate backup is needed.",
+          "privacy": "nsk never leaves the device"
+        },
+        "2": {
+          "title": "Payment Link",
+          "actor": "Recipient → Sender",
+          "description": "Share public keys only (npk + encPubKey) via URL/QR",
+          "detail": "The recipient generates a URL or QR code containing npk and encPubKey. Since only public keys are included, fund theft is impossible even if the link is exposed. The sender extracts the recipient's public keys from this link to create encrypted notes.",
+          "privacy": "No secret keys in the link"
+        },
+        "3": {
+          "title": "Deposit",
+          "actor": "Sender",
+          "description": "Poseidon2 commitment + ECIES encrypted note → on-chain deposit",
+          "detail": "Computes a Poseidon2 commitment from amount, secret, npk, depositor, and blockNumber. Creates both a Recipient Note (ECIES-encrypted) and an Operator Note, then calls the PrivacyPoolV2 contract's deposit() function.",
+          "privacy": "Commitment hides all transaction details"
+        },
+        "4": {
+          "title": "Indexing",
+          "actor": "Sequencer",
+          "description": "Encrypted notes stored, Merkle tree updated, root submitted on-chain",
+          "detail": "The sequencer detects on-chain Deposit events and stores encrypted notes. It inserts commitments into the Incremental Merkle Tree in O(log n), then submits a new root on-chain when the batch condition is met (100 deposits accumulated or 30 seconds elapsed).",
+          "privacy": "Sequencer cannot decrypt notes"
+        },
+        "5": {
+          "title": "Note Scanning",
+          "actor": "Recipient (client-side)",
+          "description": "View tag filter (99.6% skip) → ECIES local decryption → OwnedNote[]",
+          "detail": "The recipient client fetches encrypted notes from the sequencer. A 1-byte view tag comparison quickly skips 99.6% of irrelevant notes. Only matching notes are ECIES-decrypted to recover amount, secret, and senderPublicKey.",
+          "privacy": "Private key never leaves the browser"
+        },
+        "6": {
+          "title": "ZK Proof",
+          "actor": "Recipient (client-side)",
+          "description": "UltraHonk proof generation with 6 constraints verification",
+          "detail": "Fetches the Merkle proof from the sequencer and computes the nullifier and compliance hash locally. Generates a witness via noir_js, then produces the proof using the UltraHonk backend (bb.js WASM). Completed client-side in ~0.18s on desktop and ~0.5s on mobile.",
+          "privacy": "Proof reveals nothing about the sender"
+        },
+        "7": {
+          "title": "2-Stage Withdrawal",
+          "actor": "Recipient + Operator",
+          "description": "Operator approval (fast) or 24h timeout (censorship resistant)",
+          "detail": "In stage 1, the ZK proof and compliance hash are submitted on-chain to initiate withdrawal (initiateWithdrawal). In stage 2, the operator decrypts the Operator Note for KYC verification and approves immediately (attestWithdrawal), or after a 24-hour timeout anyone can call claimWithdrawal to receive the funds.",
+          "privacy": "Nullifier prevents double spending"
+        }
+      },
+      "privacyMechanism": "Privacy Mechanism",
+      "noteStructureTitle": "Encrypted Note Structure",
+      "recipientNote": {
+        "title": "Recipient Note",
+        "fields": {
+          "ephemeralPubKey": "Ephemeral Public Key",
+          "ciphertext": "Ciphertext",
+          "mac": "MAC",
+          "viewTag": "View Tag"
+        },
+        "decryptedTitle": "Decrypted Contents",
+        "decrypted": {
+          "amount": "amount (transfer amount)",
+          "senderPublicKey": "senderPublicKey (sender NPK)",
+          "blindingFactor": "blindingFactor (secret)",
+          "memo": "memo (optional metadata)"
+        }
+      },
+      "operatorNote": {
+        "title": "Operator Note",
+        "fields": {
+          "ephemeralPubKey": "Ephemeral Public Key",
+          "ciphertext": "Ciphertext",
+          "mac": "MAC"
+        },
+        "decryptedTitle": "Decrypted Contents",
+        "decrypted": {
+          "secret": "secret (blinding factor)"
+        },
+        "onChainTitle": "Operator's linking ability",
+        "onChainDesc": "The depositor (msg.sender at deposit), amount, and recipient (revealed at withdrawal) are each recorded on-chain and visible to anyone — but no one can tell which deposit corresponds to which withdrawal. Only the operator can recover the secret from the Operator Note and recalculate the compliance hash with depositor + recipient + amount + secret, verifying the link between a specific deposit and withdrawal."
+      }
+    },
+    "circuit": {
+      "title": "ZK Circuit",
+      "subtitle": "Poseidon2-based zero-knowledge circuit with 6 constraints",
+      "intro": "The ZK circuit proves \"I am authorized to withdraw these funds\" without ever revealing secret keys, transaction amounts, or sender-recipient identities. Six constraints verify key ownership, deposit existence, double-spend prevention, amount range, regulatory binding, and KYC registration in a single proof — the verifier only sees true/false, with no access to the underlying data. Using Poseidon2 Sponge (t=4, rate=3) as its hash function achieves 29x faster proving time and 51x less peak memory compared to keccak256.",
+      "signatureTitle": "Circuit Signature",
+      "constraintsTitle": "6 Constraints",
+      "constraintCol": "Constraint",
+      "formulaCol": "Formula",
+      "purposeCol": "Purpose",
+      "c1Name": "NPK Binding",
+      "c1Formula": "poseidon2([nsk, DOMAIN_NPK]) == npk",
+      "c1Purpose": "Key ownership",
+      "c2Name": "Merkle Inclusion",
+      "c2Formula": "merkle_root(commitment, siblings, path) == expected_root",
+      "c2Purpose": "Deposit existence proof",
+      "c3Name": "Nullifier Integrity",
+      "c3Formula": "poseidon2([secret, nsk, DOMAIN_NULLIFIER]) == nullifier",
+      "c3Purpose": "Double-spend prevention",
+      "c4Name": "Amount Validity",
+      "c4Formula": "transfer_amount > 0 && transfer_amount <= note_amount",
+      "c4Purpose": "Partial withdrawal support",
+      "c5Name": "Compliance Hash",
+      "c5Formula": "poseidon2([depositor, recipient, amount, secret, DOMAIN]) == compliance_hash",
+      "c5Purpose": "Regulatory binding with brute-force defense",
+      "c6Name": "Registration",
+      "c6Formula": "merkle_root(npk, reg_siblings, reg_path) == expected_registration_root",
+      "c6Purpose": "KYC-bound NPK verification",
+      "poseidonTitle": "Poseidon2 Sponge (t=4, rate=3)",
+      "poseidonDesc": "Sponge is a hash construction that absorbs inputs into a fixed-size state and then squeezes out the result. t=4 means the internal state holds 4 field elements, and rate=3 means 3 are absorbed at a time. Built on finite field arithmetic, it operates natively in ZK circuits, producing dramatic performance gains over bit-operation-based keccak256.",
+      "poseidon": {
+        "functionCol": "Function",
+        "inputsCol": "Inputs",
+        "usageCol": "Usage",
+        "hash2Usage": "NPK derivation",
+        "hash3Usage": "Nullifier, Merkle node",
+        "hash5Usage": "Compliance hash (secret salt)",
+        "hash6Usage": "Commitment"
+      },
+      "domainTitle": "Domain Separators",
+      "domainDesc": "When the same Poseidon2 hash function is used for multiple purposes (commitment, nullifier, Merkle node, etc.), a unique constant is appended to each input to prevent accidental hash collisions across different usages.",
+      "perfTitle": "Performance Comparison",
+      "perfMetricCol": "Metric",
+      "perfImprovementCol": "Improvement"
+    },
+    "contracts": {
+      "title": "Smart Contracts",
+      "subtitle": "PrivacyPoolV2 — Off-chain Poseidon2 Merkle, 2-stage withdrawal",
+      "intro": "The PrivacyPoolV2 contract handles fund custody, Merkle root management, ZK proof verification, and 2-stage withdrawal. Merkle roots use a Dual-Approval structure where the Relayer proposes and the Operator confirms after independent calculation, preventing single-point manipulation. Withdrawals offer two paths — immediate operator approval or 24-hour timeout auto-execution — ensuring censorship resistance.",
+      "roleFunctionsTitle": "Role-Based Functions",
+      "roleCol": "Role",
+      "functionCol": "Function",
+      "descriptionCol": "Description",
+      "roleUser": "Token deposit + commitment queue",
+      "roleRelayerPropose": "Off-chain Poseidon2 root proposal (Dual-approval Stage 1)",
+      "roleRelayerSet": "Set relayer address",
+      "roleOperatorConfirm": "Independent calculation then root confirmation (Dual-approval Stage 2)",
+      "roleOperatorRegistration": "KYC Registration Tree root update",
+      "roleOperatorAttest": "Immediate approval → fund transfer (Stage 2a)",
+      "roleAnyoneClaim": "24h timeout → fund transfer (Stage 2b, censorship resistant)",
+      "stateTitle": "On-Chain State",
+      "stateVarCol": "State Variable",
+      "stateCommitments": "Commitment queue",
+      "stateKnownRoots": "Confirmed Merkle root list",
+      "stateCurrentRoot": "Latest confirmed root",
+      "statePendingRoot": "Pending proposed root",
+      "stateNullifiers": "Used nullifiers (double-spend prevention)",
+      "stateRegistrationRoots": "Approved Registration Tree root list",
+      "statePendingWithdrawals": "Pending withdrawals (recipient, amount, complianceHash, deadline)",
+      "eventsTitle": "Events",
+      "dualApprovalTitle": "Dual-Approval Root Mechanism",
+      "dualApprovalDesc": "Merkle roots require two independent parties (Relayer + Operator) to prevent single point of manipulation. Relayer proposes, Operator confirms after independent calculation.",
+      "testsNote": "73 Foundry tests covering dual-approval, registration, and 2-stage withdrawal"
+    },
+    "sequencer": {
+      "title": "Sequencer",
+      "subtitle": "Unified off-chain service — Incremental Merkle Tree + Note Scanner + Operator",
+      "intro": "The sequencer unifies three roles into a single off-chain service: Tree Manager, Note Scanner, and Operator Service. It supports O(log n) insertion and proof via an Incremental Merkle Tree, collects encrypted notes and serves raw data for client scanning, and handles compliance decryption and KYC registration. Batches are triggered at 100 deposits or after 30 seconds.",
+      "rolesTitle": "3 Roles",
+      "roles": {
+        "treeManager": {
+          "title": "Tree Manager",
+          "description": "Incremental Merkle Tree — O(log n) insert/proof"
+        },
+        "noteScanner": {
+          "title": "Note Scanner",
+          "description": "EncryptedNote collection + raw data serving"
+        },
+        "operatorService": {
+          "title": "Operator Service",
+          "description": "Attestation + compliance decryption + registration"
+        }
+      },
+      "merkle": {
+        "title": "Incremental Merkle Tree",
+        "description": "Replaces full tree rebuild O(n·log n) with O(log n) insertions. Stores only non-default nodes using Map. Zero hash chain pre-computed for depth 32."
+      },
+      "api": {
+        "title": "HTTP API Endpoints",
+        "columnMethod": "Method",
+        "columnEndpoint": "Endpoint",
+        "columnDescription": "Description",
+        "categories": {
+          "relayerCompatible": "Relayer Compatible",
+          "merkle": "Merkle",
+          "noteScanner": "Note Scanner",
+          "registration": "Registration",
+          "operatorPublic": "Operator (Public)",
+          "operatorAuth": "Operator (Auth)"
+        },
+        "health": "Health check + leaf count",
+        "root": "Current root + leaf count + last processed index",
+        "proofLeaf": "Merkle proof for leaf index",
+        "stats": "Tree stats (depth, leaves, pending, uptime)",
+        "proofs": "Batch proof retrieval",
+        "notes": "Encrypted notes in range (raw data)",
+        "registrationRoot": "Registration Tree current root + leaf count",
+        "registrationProof": "Registration Merkle proof for NPK",
+        "operatorPubkey": "Operator ECIES public key",
+        "operatorRegister": "KYC user registration",
+        "operatorUsers": "Registered user list",
+        "operatorWithdrawals": "Pending withdrawal list",
+        "operatorWithdrawalByNullifier": "Specific withdrawal detail",
+        "operatorAttest": "Execute attestation",
+        "operatorDecrypt": "Compliance decryption"
+      },
+      "batch": {
+        "title": "Batch Strategy",
+        "countTitle": "Count Trigger",
+        "countDescription": "100 deposits accumulated",
+        "timeTitle": "Time Trigger",
+        "timeDescription": "30s elapsed + 1+ pending"
+      }
+    },
+    "sdk": {
+      "title": "SDK",
+      "subtitle": "Browser ZK proving + ethers.js integration TypeScript library",
+      "intro": "The TypeScript SDK consists of 9 modules: crypto, keys, merkle, notes, witness, prover, wallet, contracts, and sequencer. It derives keys from EIP-1193 signatures, skips 99.6% of irrelevant notes via view tag filtering before ECIES decryption, and generates UltraHonk proofs in the browser using bb.js WASM. The Client API exposes 8 methods covering the full flow from init to claimWithdrawal.",
+      "modulesTitle": "Module Structure",
+      "modules": {
+        "crypto": "Browser Poseidon2 + ECIES (bb.js WASM)",
+        "keys": "EIP-1193 signature → key derivation",
+        "merkle": "Merkle Tree (full build + sparse proof)",
+        "notes": "Note scanning/decryption (client-side)",
+        "witness": "noir_js witness generation",
+        "prover": "UltraHonkBackend proof generation",
+        "wallet": "EIP-1193 wallet integration (ethers.js v6)",
+        "contracts": "PrivacyPoolV2 + ERC20 interface",
+        "sequencer": "Sequencer REST client"
+      },
+      "keyDerivation": {
+        "title": "Key Derivation Flow",
+        "step1": "personal_sign(\"StealthTx Key Derivation v1\")",
+        "step2": "keccak256(signature) → seed",
+        "step3": "seed → nsk (mod BN254_FR_ORDER)",
+        "step4": "computeNpk(nsk) → npk",
+        "step5": "secp256k1.getPublicKey(encPrivKey) → encPubKey",
+        "note": "Same wallet = same keys (no backup needed). Cached in localStorage."
+      },
+      "noteScanning": {
+        "title": "Note Scanning",
+        "step1": "GET /notes → raw encrypted notes",
+        "step2": "View tag filtering (99.6% skip)",
+        "step3": "ECIES decryption → OwnedNote[]"
+      },
+      "proofPipeline": {
+        "title": "Proof Generation Pipeline",
+        "step1": "Fetch Merkle proof from sequencer",
+        "step2": "Compute nullifier + complianceHash",
+        "step3": "noir_js → witness generation",
+        "step4": "UltraHonkBackend → ZK proof",
+        "step5": "Submit initiateWithdrawal tx"
+      },
+      "provingTime": {
+        "title": "Estimated Proving Time (WASM)",
+        "columnDevice": "Device",
+        "columnTime": "Time",
+        "desktop": "Desktop",
+        "desktopTime": "~0.18s",
+        "mobileLatest": "Mobile (latest)",
+        "mobileLatestTime": "~0.5s",
+        "mobileMidRange": "Mobile (mid-range)",
+        "mobileMidRangeTime": "~1.2s"
+      },
+      "clientApi": {
+        "title": "Client API",
+        "init": "Initialize crypto (Poseidon2 WASM)",
+        "connect": "Connect EIP-1193 wallet",
+        "deriveKeys": "Derive Privacy Pool key pair",
+        "scanMyNotes": "Scan for owned notes",
+        "getPrivacyBalance": "Get privacy balance",
+        "deposit": "Deposit tokens",
+        "withdraw": "Withdraw with ZK proof",
+        "claimWithdrawal": "Claim after 24h timeout"
+      }
+    },
+    "compliance": {
+      "title": "Compliance",
+      "subtitle": "How Privacy Pool satisfies privacy, regulatory compliance, and censorship resistance simultaneously",
+      "intro": "Privacy Pool satisfies three requirements simultaneously: privacy (ZK proof + stealth address), regulatory compliance (compliance hash + ECIES), and censorship resistance (24h timeout fallback). The compliance hash binds depositor, recipient, amount, and secret via Poseidon2 with ZK circuit integrity enforcement. The 2-stage withdrawal and KYC Registration Tree balance operator verification with user protection.",
+      "requirementsTitle": "Three Requirements",
+      "requirements": {
+        "privacy": {
+          "title": "Privacy",
+          "description": "Block sender-recipient connection from public observers",
+          "mechanism": "ZK proof + stealth address"
+        },
+        "regulatory": {
+          "title": "Regulatory Compliance",
+          "description": "Ensure sender-recipient and amount tracking for operators",
+          "mechanism": "Compliance hash + ECIES encryption"
+        },
+        "censorship": {
+          "title": "Censorship Resistance",
+          "description": "Guarantee fund withdrawal when operator refuses or fails",
+          "mechanism": "24h timeout fallback"
+        }
+      },
+      "complianceHash": {
+        "title": "Compliance Hash Binding",
+        "formula": "compliance_hash = poseidon2(depositor, recipient, amount, secret, DOMAIN_COMPLIANCE)",
+        "description": "ZK circuit constraint 5 guarantees integrity. Any tampering with depositor, recipient, or amount causes proof failure.",
+        "columnAttack": "Attack Scenario",
+        "columnDefense": "Defense",
+        "attacks": {
+          "row1": {
+            "attack": "Fake depositor in compliance hash",
+            "defense": "Circuit uses original depositor from commitment → proof failure"
+          },
+          "row2": {
+            "attack": "Fake recipient",
+            "defense": "Circuit uses public input recipient → on-chain mismatch"
+          },
+          "row3": {
+            "attack": "Amount manipulation",
+            "defense": "Circuit uses actual transfer_amount → proof failure"
+          },
+          "row4": {
+            "attack": "External observer brute-force reverse",
+            "defense": "Secret salt → observer doesn't know secret → infeasible"
+          }
+        }
+      },
+      "withdrawal": {
+        "title": "2-Stage Withdrawal",
+        "stage1": {
+          "label": "Stage 1: Initiate",
+          "description": "ZK proof verification + compliance hash on-chain recording + pending status"
+        },
+        "stage2a": {
+          "label": "Stage 2a: Operator Approval",
+          "description": "Immediate fund release after compliance verification"
+        },
+        "stage2b": {
+          "label": "Stage 2b: 24h Timeout",
+          "description": "Auto-execution if operator doesn't respond (censorship resistant)"
+        }
+      },
+      "kycTree": {
+        "title": "KYC Registration Tree",
+        "description": "Before withdrawing funds, users must complete KYC verification and submit their NPK to the operator. The operator registers the verified NPK in the Registration Tree (identity tree), recording the user as a verified participant. During withdrawal, ZK circuit constraint 6 checks whether the user's NPK is included in the identity tree — unregistered users cannot generate a valid proof and are blocked from withdrawing. This ensures that only verified users can participate in the protocol while preserving their privacy."
+      },
+      "visibility": {
+        "title": "Information Visibility Matrix",
+        "columnInfo": "Information",
+        "depositor": "Depositor",
+        "recipient": "Recipient",
+        "operator": "Operator",
+        "public": "Public",
+        "depositAmount": "Deposit amount",
+        "withdrawalAmount": "Withdrawal amount",
+        "depositorAddress": "Depositor address",
+        "recipientStealth": "Recipient stealth address",
+        "secret": "Secret",
+        "link": "Depositor ↔ Recipient link",
+        "compliancePreimage": "Compliance hash preimage",
+        "nsk": "NSK (nullifier secret key)",
+        "labels": {
+          "creator": "Creator",
+          "noteDecrypt": "Note decrypt",
+          "operatorNote": "Operator note",
+          "selfOnly": "Self only"
+        }
+      },
+      "verification": {
+        "title": "Operator Verification Process",
+        "step1": "Decrypt Operator Note — ECIES decryption → recover secret",
+        "step2": "Verify Compliance Hash — Recalculate hash with depositor, recipient, amount, secret",
+        "step3": "KYC Check — Look up depositor and recipient NPK, check sanctions",
+        "step4": "Policy Decision — Approve if compliant, otherwise 24h timeout auto-execution"
+      },
+      "securityNote": "The operator can know the sender-recipient connection but cannot seize funds (no NSK). The 24h timeout guarantees censorship resistance."
+    }
+  },
+  "localeSwitcher": {
+    "en": "EN",
+    "ko": "KO"
+  }
+}

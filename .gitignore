@@ -1,0 +1,35 @@
+node_modules/
+
+# Circuits
+circuits/target/
+circuits/out/
+circuits/test_vectors/
+
+# Foundry
+out/
+cache/
+contracts/out/
+contracts/cache/
+
+# Sequencer data
+data/
+
+# Build outputs
+packages/sdk/dist/
+packages/sequencer/dist/
+**/.next/
+*.backup
+
+# IDE
+docs/.obsidian/
+
+# Environment files (allow *.example only)
+.env*
+!.env*.example
+
+# Build artifacts
+**/tsconfig.tsbuildinfo
+contracts/broadcast/
+
+# Local settings
+.claude/settings.local.json
