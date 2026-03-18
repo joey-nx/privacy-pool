@@ -34,9 +34,15 @@ let useMsgpackApi = false;
 export async function initCrypto(): Promise<void> {
   if (bb) return;
   bb = await BarretenbergSync.initSingleton();
-  useMsgpackApi = bb.poseidon2Permutation
-    .toString()
-    .includes("fromPoseidon2Permutation");
+  // Detect API version by attempting a trial call with the msgpack format.
+  // toString()-based detection breaks when code is minified.
+  try {
+    const zero = new Uint8Array(32);
+    const trial = (bb as any).poseidon2Permutation({ inputs: [zero, zero, zero, zero] });
+    useMsgpackApi = trial && typeof trial.outputs !== "undefined";
+  } catch {
+    useMsgpackApi = false;
+  }
 }
 
 function getBb(): BarretenbergSync {

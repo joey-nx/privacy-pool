@@ -22,6 +22,8 @@ export const POOL_ABI = [
   "function commitments(uint256) view returns (bytes32)",
   "function lastProcessedIndex() view returns (uint256)",
   "function currentRoot() view returns (bytes32)",
+  "function relayer() view returns (address)",
+  "function operator() view returns (address)",
   "function proposeRoot(bytes32 newRoot, uint256 processedUpTo) external",
   "function confirmRoot(bytes32 expectedRoot, uint256 expectedProcessedUpTo) external",
   "function pendingRoot() view returns (bytes32 root, uint256 processedUpTo, bool proposed)",
@@ -155,7 +157,7 @@ export class ChainSync {
   }
 
   /** Re-read on-chain lastProcessedIndex and reconcile local state. */
-  private async resyncProcessedIndex(): Promise<void> {
+  async resyncProcessedIndex(): Promise<void> {
     try {
       const onChain = Number(await this.contract.lastProcessedIndex());
       if (onChain > this.syncState.lastProcessedIndex) {

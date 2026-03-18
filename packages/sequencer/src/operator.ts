@@ -403,6 +403,16 @@ export class OperatorService {
         return { success: false, error: "No pending root to confirm" };
       }
 
+      console.log(
+        `[operator] Confirming root (root: ${root}, processedUpTo: ${processedUpTo}, operator: ${this.operatorWallet.address})`,
+      );
+
+      // Verify on-chain operator address matches before sending tx
+      const onChainOperator = await this.contract.operator();
+      if (onChainOperator.toLowerCase() !== this.operatorWallet.address.toLowerCase()) {
+        return { success: false, error: `Operator mismatch: contract=${onChainOperator}, wallet=${this.operatorWallet.address}` };
+      }
+
       const tx = await operatorContract.confirmRoot(root, processedUpTo);
       const receipt = await tx.wait();
       console.log(

@@ -128,7 +128,10 @@ async function main(): Promise<void> {
 
   // Confirm any pending root left from a previous session BEFORE proposing new ones
   if (operator.isEnabled) {
-    await operator.confirmRoot();
+    const confirmResult = await operator.confirmRoot();
+    if (confirmResult.success) {
+      await chain.resyncProcessedIndex();
+    }
   }
 
   const newDeposits = await chain.syncCommitments();
@@ -136,6 +139,7 @@ async function main(): Promise<void> {
     const proposed = await chain.maybeSubmitRoot(true); // Force submit on startup if pending
     if (proposed && operator.isEnabled) {
       await operator.confirmRoot();
+      await chain.resyncProcessedIndex();
     }
   }
   await scanner.scan(config.fromBlock || undefined);
@@ -189,17 +193,16 @@ async function main(): Promise<void> {
     try {
       // Confirm any pending root before proposing a new one
       if (operator.isEnabled) {
-        await operator.confirmRoot();
+        const confirmResult = await operator.confirmRoot();
+        if (confirmResult.success) {
+          // Resync local state so submitRoot doesn't re-propose the same index
+          await chain.resyncProcessedIndex();
+        }
       }
 
       // Sync deposits
       const newCount = await chain.syncCommitments();
-      if (newCount > 0) {
-        await chain.maybeSubmitRoot();
-      } else {
-        // Time-based trigger check even if no new deposits
-        await chain.maybeSubmitRoot();
-      }
+      await chain.maybeSubmitRoot();
 
       // Scan notes (with compliance logging for newly discovered notes)
       const noteCountBefore = scanner.noteCount;
