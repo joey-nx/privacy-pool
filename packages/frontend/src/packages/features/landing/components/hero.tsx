@@ -10,21 +10,16 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
-      {/* Glowing circular gradient */}
+      {/* Subtle background glow */}
       <div className="absolute inset-0 flex items-center justify-center">
         <motion.div
           className="absolute w-[800px] h-[800px] rounded-full bg-[radial-gradient(circle,_rgba(209,213,219,0.5)_0%,_rgba(156,163,175,0.2)_30%,_transparent_70%)] dark:bg-[radial-gradient(circle,_rgba(156,163,175,0.3)_0%,_rgba(107,114,128,0.15)_30%,_transparent_70%)] blur-[80px]"
-          animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.6, 0.4] }}
+          animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.35, 0.2] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,_rgba(209,213,219,0.6)_0%,_transparent_70%)] dark:bg-[radial-gradient(circle,_rgba(156,163,175,0.4)_0%,_transparent_70%)] blur-[60px]"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
 
-      {/* Concentric circles */}
+      {/* Concentric circles — "pool" metaphor */}
       <div className="absolute inset-0 flex items-center justify-center">
         {[...Array(5)].map((_, i) => (
           <motion.div
@@ -37,27 +32,6 @@ export function Hero() {
               repeat: Infinity,
               ease: "easeInOut",
               delay: i * 0.5,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute inset-0">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={`particle-${i}`}
-            className="absolute w-2 h-2 rounded-full bg-gray-300/50 dark:bg-gray-400/40"
-            style={{ left: `${20 + i * 10}%`, top: `${30 + (i % 3) * 20}%` }}
-            animate={{
-              y: [-20, 20, -20],
-              x: [-10, 10, -10],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: "easeInOut",
             }}
           />
         ))}
