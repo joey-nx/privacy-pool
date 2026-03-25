@@ -27,49 +27,51 @@ export function HowItWorks() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[120px] bg-gray-300/10 dark:bg-gray-500/5" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <div className="text-sm tracking-widest uppercase mb-4 text-gray-600 dark:text-gray-400">
-            {t("label")}
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-balance mb-6 text-gray-900 dark:text-white">
-            {headingLines[0]}
-            <br />
-            <span className="text-gradient">{headingLines[1]}</span>
-          </h2>
-        </motion.div>
+        <div ref={ref} className="lg:grid lg:grid-cols-[1fr_1.5fr] lg:gap-16 mb-16">
+          {/* Left: section intro — left-aligned, sticky on desktop */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="mb-12 lg:mb-0 lg:sticky lg:top-28 lg:self-start"
+          >
+            <div className="text-sm tracking-widest uppercase mb-4 text-gray-600 dark:text-gray-400">
+              {t("label")}
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-balance mb-6 text-gray-900 dark:text-white">
+              {headingLines[0]}
+              <br />
+              <span className="text-gradient">{headingLines[1]}</span>
+            </h2>
+          </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="relative"
-            >
-              <div className="flex gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full border-2 flex items-center justify-center text-2xl font-light border-amber-600 text-amber-600 bg-amber-600/5 dark:border-amber-400 dark:text-amber-400 dark:bg-amber-400/5">
-                    {step.number}
+          {/* Right: steps — single column flow */}
+          <div className="space-y-8">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+              >
+                <div className="flex gap-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full border-2 flex items-center justify-center text-2xl font-light border-amber-600 text-amber-600 bg-amber-600/5 dark:border-amber-400 dark:text-amber-400 dark:bg-amber-400/5">
+                      {step.number}
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-2">
+                    <h3 className="text-2xl font-medium mb-3 text-gray-900 dark:text-white">
+                      {step.title}
+                    </h3>
+                    <p className="leading-relaxed mb-4 text-gray-600 dark:text-white/70">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                <div className="flex-1 pt-2">
-                  <h3 className="text-2xl font-medium mb-3 text-gray-900 dark:text-white">
-                    {step.title}
-                  </h3>
-                  <p className="leading-relaxed mb-4 text-gray-600 dark:text-white/70">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         <motion.div
