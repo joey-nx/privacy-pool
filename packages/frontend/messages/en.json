@@ -10,7 +10,8 @@
     "compliance": "Compliance",
     "app": "App",
     "docs": "Docs",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu"
   },
   "hero": {
     "label": "Private Pool Protocol",

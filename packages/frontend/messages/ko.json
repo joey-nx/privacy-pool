@@ -10,7 +10,8 @@
     "compliance": "Compliance",
     "app": "App",
     "docs": "Docs",
-    "toggleTheme": "테마 전환"
+    "toggleTheme": "테마 전환",
+    "toggleMenu": "메뉴 열기"
   },
   "hero": {
     "label": "Private Pool Protocol",
