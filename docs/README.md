@@ -2,6 +2,13 @@
 
 > Compliant Privacy Stablecoin — 조건부 프라이버시 결제 시스템
 
+## Strategy
+
+| 문서 | 내용 |
+|------|------|
+| [roadmap.md](./roadmap.md) | 프로젝트 로드맵 — AI Agent 프라이빗 DeFi 실행 레이어 |
+| [references.md](./references.md) | 참고 자료 — EIP/ERC, 경쟁 프로젝트, AI Agent 프레임워크, 논문, 규제 |
+
 ## Documents
 
 | 문서 | 내용 |
