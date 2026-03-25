@@ -68,9 +68,7 @@ export function FeaturesSection() {
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl bg-gradient-to-br from-gray-300/20 to-transparent dark:from-gray-500/10 dark:to-transparent" />
               <div className="relative p-8 border backdrop-blur-sm transition-all duration-500 border-gray-200 bg-white/60 group-hover:border-gray-400/50 dark:border-white/10 dark:bg-gray-900/40 dark:group-hover:border-gray-500/30">
                 <div className="mb-6">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500 bg-amber-600/10 dark:bg-amber-400/10">
-                    <feature.icon className="w-6 h-6 stroke-[1.5] text-amber-600 dark:text-amber-400" />
-                  </div>
+                  <feature.icon className="w-8 h-8 stroke-[1.5] text-amber-600 dark:text-amber-400" />
                 </div>
                 <h3 className="text-2xl font-medium mb-4 transition-colors duration-300 text-gray-900 group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-300">
                   {feature.title}
