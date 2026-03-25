@@ -17,7 +17,7 @@ export function LocaleSwitcher() {
     <div className="flex items-center border rounded-lg overflow-hidden border-gray-200 dark:border-gray-700">
       <button
         onClick={() => switchLocale("en")}
-        className={`px-2 py-1 text-xs font-medium transition-colors ${
+        className={`px-3 py-2 text-sm min-h-[44px] min-w-[44px] flex items-center justify-center font-medium transition-colors ${
           locale === "en"
             ? "bg-amber-600 text-white dark:bg-amber-500"
             : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
@@ -27,7 +27,7 @@ export function LocaleSwitcher() {
       </button>
       <button
         onClick={() => switchLocale("ko")}
-        className={`px-2 py-1 text-xs font-medium transition-colors ${
+        className={`px-3 py-2 text-sm min-h-[44px] min-w-[44px] flex items-center justify-center font-medium transition-colors ${
           locale === "ko"
             ? "bg-amber-600 text-white dark:bg-amber-500"
             : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
