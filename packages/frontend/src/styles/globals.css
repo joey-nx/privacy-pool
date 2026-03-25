@@ -30,7 +30,7 @@
  */
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-amber-600 to-amber-700 text-white transition-all duration-300;
+    @apply bg-gradient-to-r from-amber-600 to-amber-700 text-white font-semibold transition-all duration-300;
     box-shadow: 0 0 30px rgba(217, 119, 6, 0.4);
 
     &:hover {
