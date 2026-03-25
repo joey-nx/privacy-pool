@@ -13,10 +13,12 @@ export function LandingView() {
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-gray-100/50 via-white to-gray-50 dark:from-gray-900/30 dark:via-gray-950 dark:to-black" />
       <div className="relative z-10">
         <Navigation />
-        <Hero />
-        <FeaturesSection />
-        <HowItWorks />
-        <Compliance />
+        <main>
+          <Hero />
+          <FeaturesSection />
+          <HowItWorks />
+          <Compliance />
+        </main>
         <Footer />
       </div>
     </div>
