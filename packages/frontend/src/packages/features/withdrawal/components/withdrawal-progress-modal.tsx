@@ -3,7 +3,7 @@
 import { useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { Check, X, Loader2, AlertCircle, ExternalLink } from "lucide-react";
+import { Check, X, Loader2, AlertCircle, ExternalLink, ShieldCheck } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { WithdrawalProgress, ProofStep } from "~shared/types/withdrawal";
 import { SUPPORTED_TOKENS } from "~shared/config/tokens";
@@ -156,6 +156,12 @@ export function WithdrawalProgressModal({
 
             {isSuccess && (
               <div className="mb-4 space-y-2">
+                <div className="flex items-center justify-center gap-1.5 px-3 py-1.5 mx-auto w-fit border border-green-300 bg-green-50 dark:border-green-500/30 dark:bg-green-500/10 rounded-full">
+                  <ShieldCheck className="w-3.5 h-3.5 text-green-600 dark:text-green-400" />
+                  <span className="text-xs font-medium text-green-700 dark:text-green-400">
+                    검증된 참여자
+                  </span>
+                </div>
                 {completedTxHashes.map((hash, i) => (
                   <a
                     key={hash}
