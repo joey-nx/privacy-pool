@@ -87,7 +87,7 @@
 
   /* ── LAYER DIAGRAM ── */
   .section { margin-bottom: 56px; }
-  .sec-label {
+  h2.sec-label, .sec-label {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px; text-transform: uppercase;
     letter-spacing: 0.15em; color: var(--muted); margin-bottom: 16px;
@@ -202,7 +202,7 @@
     padding: 3px 8px; border-radius: 4px; white-space: nowrap;
   }
 
-  .ph-name { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2px; }
+  h3.ph-name, .ph-name { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2px; }
   .ph-desc { font-size: 13px; color: var(--muted); }
   .ph-dur { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted); text-align: right; white-space: nowrap; }
 
@@ -323,7 +323,7 @@
 
   <!-- LAYER ARCHITECTURE -->
   <div class="section">
-    <div class="sec-label">레이어 구조</div>
+    <h2 class="sec-label">레이어 구조</h2>
     <div class="layers">
 
       <div class="layer-row">
@@ -397,7 +397,7 @@
 
   <!-- PAYMENT FLOW -->
   <div class="section">
-    <div class="sec-label">결제 흐름 — Phase 1 기준</div>
+    <h2 class="sec-label">결제 흐름 — Phase 1 기준</h2>
     <div class="flows">
 
       <div class="flow-card">
@@ -456,7 +456,7 @@
 
   <!-- TIMELINE -->
   <div class="section">
-    <div class="sec-label">타임라인</div>
+    <h2 class="sec-label">타임라인</h2>
     <div class="tl-grid">
 
       <div>
@@ -546,7 +546,7 @@
   </div>
 
   <!-- PHASE DETAIL -->
-  <div class="sec-label" style="margin-bottom: 16px;">Phase 상세</div>
+  <h2 class="sec-label" style="margin-bottom: 16px;">Phase 상세</h2>
   <div class="phases">
 
     <!-- ── PHASE 0 ── -->
@@ -554,7 +554,7 @@
       <div class="ph-head">
         <div class="ph-badge">PHASE 0</div>
         <div>
-          <div class="ph-name">Foundation</div>
+          <h3 class="ph-name">Foundation</h3>
           <div class="ph-desc">보안 · 아키텍처 · 익명성 기반 완성. 이후 모든 Phase의 전제.</div>
         </div>
         <div class="ph-dur">M1 · 1개월</div>
@@ -648,7 +648,7 @@
       <div class="ph-head">
         <div class="ph-badge">PHASE 1</div>
         <div>
-          <div class="ph-name">Cross Pay</div>
+          <h3 class="ph-name">Cross Pay</h3>
           <div class="ph-desc">오프체인 결제를 온체인으로 가져온다. Privacy Pool의 기본 Tx와 초기 사용량 확보. Operator 없는 단일 단계 출금.</div>
         </div>
         <div class="ph-dur">M2 · 1개월</div>
@@ -702,7 +702,7 @@
       <div class="ph-head">
         <div class="ph-badge">PHASE 2</div>
         <div>
-          <div class="ph-name">Privacy Pool Agent</div>
+          <h3 class="ph-name">Privacy Pool Agent</h3>
           <div class="ph-desc">Privacy Pool을 ERC-8004 Agent로 등록. 다른 Agent에게 프라이버시 결제 인프라를 서비스로 제공.</div>
         </div>
         <div class="ph-dur">M3 · 1개월</div>
@@ -761,7 +761,7 @@
       <div class="ph-head">
         <div class="ph-badge">PHASE 3</div>
         <div>
-          <div class="ph-name">Identity Tree</div>
+          <h3 class="ph-name">Identity Tree</h3>
           <div class="ph-desc">Compliance가 요구되는 순간 이 모듈이 전제 조건이 된다. Phase 4 Compliance와 함께 통합.</div>
         </div>
         <div class="ph-dur">M4 · 1개월</div>
@@ -812,7 +812,7 @@
       <div class="ph-head">
         <div class="ph-badge">PHASE 4</div>
         <div>
-          <div class="ph-name">Compliance</div>
+          <h3 class="ph-name">Compliance</h3>
           <div class="ph-desc">Identity Tree 위에 Compliance Layer를 연결. 규제 대상 거래 지원. Phase 3 완료 후 착수.</div>
         </div>
         <div class="ph-dur">M5 · 1개월</div>
@@ -872,7 +872,7 @@
       <div class="ph-head">
         <div class="ph-badge">PHASE 5</div>
         <div>
-          <div class="ph-name">Expansion</div>
+          <h3 class="ph-name">Expansion</h3>
           <div class="ph-desc">Phase 1 상업적 검증 완료 후 시장 수요에 따라 우선순위를 결정. 방향성만 열어둔다.</div>
         </div>
         <div class="ph-dur">M6+ · 시장 검증 후</div>
