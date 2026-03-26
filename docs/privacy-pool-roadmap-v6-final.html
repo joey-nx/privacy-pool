@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Pool — Roadmap v6</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:   #07090d;
+    --s1:   #0c1018;
+    --s2:   #111720;
+    --bd:   #1c2530;
+    --bd2:  #273040;
+    --text: #d8e0ea;
+    --muted:#4a5a6a;
+    --dim:  #263040;
+
+    --c0: #4fc4f7;
+    --c1: #50d9a0;
+    --c2: #a78bfa;
+    --c3: #fbbf24;
+    --c4: #f97b4a;
+    --c5: #f472b6;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none; z-index: 0;
+  }
+
+  .page {
+    position: relative; z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 72px 32px 120px;
+  }
+
+  /* ── HEADER ── */
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 5.5vw, 56px);
+    font-weight: 700; letter-spacing: -0.03em;
+    line-height: 1.0; margin-bottom: 14px;
+  }
+  h1 .accent { color: var(--c0); }
+
+  .tagline { font-size: 15px; color: var(--muted); font-weight: 300; margin-bottom: 6px; }
+  .meta { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--dim); margin-bottom: 56px; }
+
+  /* ── VISION ── */
+  .vision {
+    border-left: 2px solid var(--c0);
+    padding: 16px 24px; margin-bottom: 56px;
+    background: rgba(79,196,247,0.04);
+    border-radius: 0 8px 8px 0;
+  }
+  .vision-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--c0);
+    margin-bottom: 8px; opacity: 0.7;
+  }
+  .vision-text { font-size: 14px; color: var(--text); font-weight: 400; line-height: 1.75; }
+
+  /* ── LAYER DIAGRAM ── */
+  .section { margin-bottom: 56px; }
+  .sec-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; text-transform: uppercase;
+    letter-spacing: 0.15em; color: var(--muted); margin-bottom: 16px;
+  }
+
+  .layers { display: flex; flex-direction: column; gap: 2px; }
+
+  .layer-row { display: grid; grid-template-columns: 152px 1fr; gap: 2px; }
+
+  .layer-name {
+    background: var(--s1); border: 1px solid var(--bd);
+    border-radius: 5px; padding: 12px 14px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .layer-name-main { font-weight: 600; font-size: 11px; color: var(--text); margin-bottom: 1px; }
+  .layer-name-sub { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); }
+
+  .layer-content {
+    background: var(--s1); border: 1px solid var(--bd);
+    border-radius: 5px; padding: 12px 16px;
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  }
+
+  .layer-item { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+  .layer-item::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--bd2); flex-shrink: 0; }
+
+  .layer-row.hl .layer-name,
+  .layer-row.hl .layer-content { border-color: var(--bd2); background: var(--s2); }
+  .layer-row.hl .layer-item::before { background: var(--c0); }
+  .layer-row.hl .layer-item { color: var(--text); }
+  .layer-row.hl .layer-name-main { color: var(--c0); }
+
+  .l-opt {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    padding: 2px 6px; border-radius: 3px;
+    margin-left: auto; white-space: nowrap; align-self: center;
+  }
+
+  /* ── FLOW ── */
+  .flows { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .flow-card { border: 1px solid var(--bd); border-radius: 8px; overflow: hidden; }
+
+  .flow-head {
+    padding: 11px 15px; display: flex; align-items: center;
+    gap: 8px; border-bottom: 1px solid var(--bd);
+  }
+  .flow-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .flow-title { font-size: 12px; font-weight: 600; }
+  .flow-sub {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    margin-left: auto; padding: 2px 6px; border-radius: 3px;
+  }
+  .flow-body { padding: 14px; background: var(--s1); }
+
+  .fstep { display: flex; align-items: flex-start; gap: 10px; padding: 7px 8px; border-radius: 4px; }
+  .fstep + .fstep { margin-top: 1px; }
+  .fstep:hover { background: var(--s2); }
+
+  .fn { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--dim); flex-shrink: 0; margin-top: 2px; width: 14px; }
+  .ft { font-size: 12px; color: var(--text); font-weight: 500; flex-shrink: 0; min-width: 110px; }
+  .fd { font-size: 11px; color: var(--muted); }
+
+  /* ── TIMELINE ── */
+  .tl-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3px;
+  }
+
+  .tl-ph {
+    padding: 8px 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: #000; border-radius: 5px 5px 0 0;
+    letter-spacing: 0.05em;
+  }
+
+  .tl-body {
+    border: 1px solid var(--bd); border-top: none;
+    border-radius: 0 0 5px 5px;
+    background: var(--s1); padding: 12px;
+  }
+
+  .tl-name { font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: 2px; letter-spacing: -0.01em; }
+  .tl-period { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); margin-bottom: 8px; }
+
+  .tl-items { display: flex; flex-direction: column; gap: 3px; }
+  .tl-item { font-size: 10px; color: var(--muted); display: flex; align-items: flex-start; gap: 5px; line-height: 1.4; }
+  .tl-item::before { content: '–'; color: var(--dim); flex-shrink: 0; }
+
+  .tl-foot {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    color: var(--dim); margin-top: 8px; padding-top: 7px;
+    border-top: 1px solid var(--bd);
+  }
+
+  /* ── PHASE DETAIL ── */
+  .phases { display: flex; flex-direction: column; gap: 3px; }
+
+  .ph { border: 1px solid var(--bd); border-radius: 10px; overflow: hidden; }
+
+  .ph-head {
+    display: grid; grid-template-columns: auto 1fr auto;
+    gap: 14px; align-items: center;
+    padding: 16px 22px; border-bottom: 1px solid var(--bd);
+  }
+
+  .ph-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    padding: 3px 8px; border-radius: 4px; white-space: nowrap;
+  }
+
+  .ph-name { font-size: 15px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 2px; }
+  .ph-desc { font-size: 11px; color: var(--muted); }
+  .ph-dur { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); text-align: right; white-space: nowrap; }
+
+  .ph-body { padding: 14px 22px; background: var(--s1); display: flex; flex-direction: column; gap: 4px; }
+
+  .group-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--dim); padding: 8px 0 4px;
+    border-bottom: 1px solid var(--bd); margin-bottom: 2px;
+  }
+  .group-label:first-child { padding-top: 0; }
+
+  .task {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 10px; align-items: start;
+    padding: 10px 12px; border: 1px solid var(--bd);
+    border-radius: 5px; background: var(--s2);
+  }
+
+  .task-t { font-size: 12px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+  .task-d { font-size: 11px; color: var(--muted); line-height: 1.55; }
+  .task-d code {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    background: rgba(255,255,255,0.06); padding: 1px 4px;
+    border-radius: 2px; color: var(--text);
+  }
+
+  .tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 9px; padding: 2px 7px; border-radius: 3px; white-space: nowrap; align-self: flex-start;
+  }
+  .tag-must  { background: rgba(249,113,74,0.15);  color: #f97b4a; }
+  .tag-sec   { background: rgba(251,191,36,0.13);  color: #fbbf24; }
+  .tag-new   { background: rgba(80,217,160,0.13);  color: #50d9a0; }
+  .tag-arch  { background: rgba(79,196,247,0.13);  color: #4fc4f7; }
+  .tag-erc   { background: rgba(167,139,250,0.15); color: #a78bfa; }
+  .tag-infra { background: rgba(148,163,184,0.12); color: #94a3b8; }
+
+  .note {
+    display: flex; gap: 10px; padding: 10px 12px; border-radius: 5px;
+    font-size: 11px; line-height: 1.55; margin-top: 2px;
+  }
+  .note-info { background: rgba(79,196,247,0.07); border: 1px solid rgba(79,196,247,0.15); color: #5bb8d4; }
+  .note-warn { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.15); color: #c49a10; }
+
+  .dels {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    padding-top: 10px; margin-top: 8px;
+    border-top: 1px solid var(--bd);
+  }
+  .dels-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--dim);
+    text-transform: uppercase; letter-spacing: 0.1em; width: 100%;
+  }
+  .del {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    padding: 2px 8px; background: rgba(255,255,255,0.03);
+    border: 1px solid var(--bd); border-radius: 3px; color: var(--muted);
+  }
+
+  /* ── IDEAS (Phase 5) ── */
+  .ideas { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 4px; }
+  .idea { border: 1px solid var(--bd); border-radius: 5px; background: var(--s2); padding: 12px 14px; }
+  .idea-title { font-size: 12px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+  .idea-desc { font-size: 11px; color: var(--muted); line-height: 1.5; }
+
+  /* COLOR THEMES */
+  .c0 .ph-badge { background: rgba(79,196,247,0.12);  color: var(--c0); border: 1px solid rgba(79,196,247,0.2);  }
+  .c0 .ph-name  { color: var(--c0); }
+  .c1 .ph-badge { background: rgba(80,217,160,0.12);  color: var(--c1); border: 1px solid rgba(80,217,160,0.2);  }
+  .c1 .ph-name  { color: var(--c1); }
+  .c2 .ph-badge { background: rgba(167,139,250,0.12); color: var(--c2); border: 1px solid rgba(167,139,250,0.2); }
+  .c2 .ph-name  { color: var(--c2); }
+  .c3 .ph-badge { background: rgba(251,191,36,0.12);  color: var(--c3); border: 1px solid rgba(251,191,36,0.2);  }
+  .c3 .ph-name  { color: var(--c3); }
+  .c4 .ph-badge { background: rgba(249,123,74,0.12);  color: var(--c4); border: 1px solid rgba(249,123,74,0.2);  }
+  .c4 .ph-name  { color: var(--c4); }
+  .c5 .ph-badge { background: rgba(244,114,182,0.12); color: var(--c5); border: 1px solid rgba(244,114,182,0.2); }
+  .c5 .ph-name  { color: var(--c5); }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding-top: 24px; border-top: 1px solid var(--bd);
+    display: flex; justify-content: space-between;
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--dim);
+    flex-wrap: wrap; gap: 8px; margin-top: 56px;
+  }
+
+  @media (max-width: 700px) {
+    .page { padding: 40px 16px 80px; }
+    .flows { grid-template-columns: 1fr; }
+    .tl-grid { grid-template-columns: repeat(3, 1fr); }
+    .layer-row { grid-template-columns: 1fr; }
+    .ideas { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="eyebrow">Privacy Pool — Internal · Confidential</div>
+  <h1><span class="accent">Privacy Pool</span> Roadmap</h1>
+  <div class="tagline">Privacy-First Agent Commerce Infrastructure</div>
+  <div class="meta">v6 · 2026.03.26 · 6 Phases · Phase 0–4 각 1개월</div>
+
+  <!-- VISION -->
+  <div class="vision">
+    <div class="vision-label">핵심 방향</div>
+    <div class="vision-text">
+      Privacy Layer를 기반으로 단계적으로 쌓는다.<br>
+      게임 결제(Cross Pay)는 오프체인 결제를 온체인으로 가져오는 작업으로, Privacy Pool의 기본 Tx와 초기 사용량을 만드는 토대다.<br>
+      Privacy Pool을 ERC-8004 Agent로 등록 → Identity Tree로 신원 인프라 → Compliance Layer로 규제 준수 → Expansion.<br>
+      Compliance와 Identity는 같은 시점에 중요해진다. 두 레이어는 분리 개발하되 Phase 4에서 통합된다.
+    </div>
+  </div>
+
+  <!-- LAYER ARCHITECTURE -->
+  <div class="section">
+    <div class="sec-label">레이어 구조</div>
+    <div class="layers">
+
+      <div class="layer-row">
+        <div class="layer-name">
+          <div class="layer-name-main">Application</div>
+          <div class="layer-name-sub">Phase 1, 5</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-item">Game Item Shop (Cross Pay)</div>
+          <div class="layer-item">Agent Merchant / Customer</div>
+          <div class="layer-item">ERC-8004 Discovery</div>
+        </div>
+      </div>
+
+      <div class="layer-row hl">
+        <div class="layer-name">
+          <div class="layer-name-main">Privacy Layer</div>
+          <div class="layer-name-sub">Phase 0 · Core</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-item">PrivacyPoolCore</div>
+          <div class="layer-item">ZK Proof (Noir / Honk)</div>
+          <div class="layer-item">Stealth Address</div>
+          <div class="layer-item">Fixed Denomination</div>
+          <div class="layer-item">Merkle Tree</div>
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-name">
+          <div class="layer-name-main">Identity Layer</div>
+          <div class="layer-name-sub">Phase 3 · Optional</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-item">IdentityRegistry</div>
+          <div class="layer-item">KYC / KYA ZK Circuit</div>
+          <div class="layer-item">Selective Disclosure</div>
+          <div class="layer-item">ERC-8004 Bridge</div>
+          <div class="l-opt" style="background:rgba(251,191,36,0.12);color:#fbbf24;">OPTIONAL</div>
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-name">
+          <div class="layer-name-main">Compliance Layer</div>
+          <div class="layer-name-sub">Phase 4 · Optional</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-item">IComplianceModule</div>
+          <div class="layer-item">Multisig Operator</div>
+          <div class="layer-item">AML Screening</div>
+          <div class="layer-item">ECIES 암호화</div>
+          <div class="l-opt" style="background:rgba(249,123,74,0.12);color:#f97b4a;">OPTIONAL</div>
+        </div>
+      </div>
+
+      <div class="layer-row">
+        <div class="layer-name">
+          <div class="layer-name-main">Settlement</div>
+          <div class="layer-name-sub">L2 운영 중</div>
+        </div>
+        <div class="layer-content">
+          <div class="layer-item">EVM L2 (운영 중)</div>
+          <div class="layer-item">USDT / ERC-20</div>
+          <div class="layer-item">CROSSD</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAYMENT FLOW -->
+  <div class="section">
+    <div class="sec-label">결제 흐름 — Phase 1 기준</div>
+    <div class="flows">
+
+      <div class="flow-card">
+        <div class="flow-head" style="background:rgba(80,217,160,0.05);">
+          <div class="flow-dot" style="background:var(--c1);"></div>
+          <div class="flow-title" style="color:var(--c1);">Deposit</div>
+          <div class="flow-sub" style="background:rgba(80,217,160,0.1);color:var(--c1);">SDK 처리</div>
+        </div>
+        <div style="padding: 8px 14px 0; background: var(--s1);">
+          <div style="display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace; font-size:10px; padding: 3px 10px; background: rgba(80,217,160,0.08); border: 1px solid rgba(80,217,160,0.2); border-radius: 20px; color: var(--c1);">
+            <span style="width:5px;height:5px;border-radius:50%;background:var(--c1);display:inline-block;"></span>
+            Privacy Layer Only — Operator 없음
+          </div>
+        </div>
+        <div class="flow-body">
+          <div class="fstep">
+            <div class="fn">01</div>
+            <div class="ft">금액 분해</div>
+            <div class="fd">Fixed Denomination으로 분해하여 금액 기반 추적 가능성 제거</div>
+          </div>
+          <div class="fstep">
+            <div class="fn">02</div>
+            <div class="ft">commitment 등록</div>
+            <div class="fd">denomination별 Pool에 입금 → Sequencer → Merkle Tree → Root 온체인 제출</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-card">
+        <div class="flow-head" style="background:rgba(80,217,160,0.05);">
+          <div class="flow-dot" style="background:var(--c1);"></div>
+          <div class="flow-title" style="color:var(--c1);">Withdrawal</div>
+          <div class="flow-sub" style="background:rgba(80,217,160,0.1);color:var(--c1);">Operator 없음</div>
+        </div>
+        <div class="flow-body">
+          <div class="fstep">
+            <div class="fn">01</div>
+            <div class="ft">ZK Proof 생성</div>
+            <div class="fd">오프체인, bb.js · 수초 내</div>
+          </div>
+          <div class="fstep">
+            <div class="fn">02</div>
+            <div class="ft">claimWithdrawal</div>
+            <div class="fd">단일 단계. ZK 검증 즉시 자금 전송</div>
+          </div>
+          <div class="fstep">
+            <div class="fn">03</div>
+            <div class="ft">수령</div>
+            <div class="fd">스텔스 주소에서 직접 ERC-20 수신</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="section">
+    <div class="sec-label">타임라인</div>
+    <div class="tl-grid">
+
+      <div>
+        <div class="tl-ph" style="background:var(--c0);">Phase 0</div>
+        <div class="tl-body">
+          <div class="tl-name">Foundation</div>
+          <div class="tl-period">M1 · 1개월</div>
+          <div class="tl-items">
+            <div class="tl-item">보안 스택 교체</div>
+            <div class="tl-item">Privacy / Compliance 분리</div>
+            <div class="tl-item">Fixed Denomination</div>
+            <div class="tl-item">Sequencer 강화</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tl-ph" style="background:var(--c1);">Phase 1</div>
+        <div class="tl-body">
+          <div class="tl-name">Cross Pay</div>
+          <div class="tl-period">M2 · 1개월</div>
+          <div class="tl-items">
+            <div class="tl-item">Item Shop 통합</div>
+            <div class="tl-item">Privacy 결제 경로</div>
+            <div class="tl-item">Gas 최적화</div>
+            <div class="tl-item">Key 조회 API</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tl-ph" style="background:var(--c2);">Phase 2</div>
+        <div class="tl-body">
+          <div class="tl-name">Privacy Pool Agent</div>
+          <div class="tl-period">M3 · 1개월</div>
+          <div class="tl-items">
+            <div class="tl-item">ERC-8004 Agent 등록</div>
+            <div class="tl-item">Sequencer as Agent</div>
+            <div class="tl-item">결제 위임 플로우</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tl-ph" style="background:var(--c3);">Phase 3</div>
+        <div class="tl-body">
+          <div class="tl-name">Identity Tree</div>
+          <div class="tl-period">M4 · 1개월</div>
+          <div class="tl-items">
+            <div class="tl-item">KYC / KYA ZK Circuit</div>
+            <div class="tl-item">IdentityRegistry</div>
+            <div class="tl-item">Selective Disclosure</div>
+            <div class="tl-item">ERC-8004 Identity Backing</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tl-ph" style="background:var(--c4);">Phase 4</div>
+        <div class="tl-body">
+          <div class="tl-name">Compliance</div>
+          <div class="tl-period">M5 · 1개월</div>
+          <div class="tl-items">
+            <div class="tl-item">Multisig Operator</div>
+            <div class="tl-item">IComplianceModule 구현</div>
+            <div class="tl-item">AML 스크리닝</div>
+            <div class="tl-item">Identity 통합</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tl-ph" style="background:var(--c5);">Phase 5</div>
+        <div class="tl-body">
+          <div class="tl-name">Expansion</div>
+          <div class="tl-period">M6+ · 시장 검증 후</div>
+          <div class="tl-items">
+            <div class="tl-item">Privacy ENS</div>
+            <div class="tl-item">Agent Merchant / Customer</div>
+            <div class="tl-item">Intent Market</div>
+            <div class="tl-item">A2A Advertising</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PHASE DETAIL -->
+  <div class="sec-label" style="margin-bottom: 16px;">Phase 상세</div>
+  <div class="phases">
+
+    <!-- ── PHASE 0 ── -->
+    <div class="ph c0">
+      <div class="ph-head">
+        <div class="ph-badge">PHASE 0</div>
+        <div>
+          <div class="ph-name">Foundation</div>
+          <div class="ph-desc">보안 · 아키텍처 · 익명성 기반 완성. 이후 모든 Phase의 전제.</div>
+        </div>
+        <div class="ph-dur">M1 · 1개월</div>
+      </div>
+      <div class="ph-body">
+
+        <div class="group-label">보안</div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">암호화 전환 — XOR → AES-256-GCM</div>
+            <div class="task-d">Compliance 데이터(송수신자 매핑) 보안을 프로덕션 수준으로. <code>crypto.ts</code> 전면 재작성.</div>
+          </div>
+          <div class="tag tag-must">MUST</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">bb VK 결정성 파이프라인 고정</div>
+            <div class="task-d"><code>bb prove --write_vk</code> CI/CD 강제 적용. VK 재현성 테스트 추가.</div>
+          </div>
+          <div class="tag tag-must">MUST</div>
+        </div>
+
+        <div class="group-label">아키텍처</div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">PrivacyPoolCore / IComplianceModule 분리</div>
+            <div class="task-d">
+              <code>PrivacyPoolCore</code>: ZK 검증, Merkle 상태, Nullifier. Compliance 의존성 없음. 단독 동작.<br>
+              <code>IComplianceModule</code>: <code>onDeposit()</code> / <code>onWithdraw()</code> 훅. Phase 4에서 선택적 연결.
+            </div>
+          </div>
+          <div class="tag tag-arch">ARCH</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">Fixed Denomination — 지폐 모델</div>
+            <div class="task-d">
+              컨트랙트: <code>1 / 2 / 5 / 10 / 100 USDT</code> 외 입금 하드 리젝. denomination 목록 확장 가능.<br>
+              SDK: 금액을 최소 장수로 분해 → denomination별 Pool에 즉시 입금.
+            </div>
+          </div>
+          <div class="tag tag-arch">ARCH</div>
+        </div>
+
+        <div class="group-label">Sequencer 운영 수준 강화</div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">스토리지 백엔드 교체 — JSON → MySQL / Redis</div>
+            <div class="task-d">현재 JSON 파일 기반 퍼시스턴스는 동시 쓰기 안전하지 않음. MySQL로 Merkle Tree 상태 · 이벤트 로그 영속화. Redis로 캐시 및 큐 처리.</div>
+          </div>
+          <div class="tag tag-infra">INFRA</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">배치 처리 · 재시도 · 멱등성 보장</div>
+            <div class="task-d">이벤트 유실 방지. 체인 재조직(reorg) 대응. Root 제출 실패 시 자동 재시도. 동일 이벤트 중복 처리 방지.</div>
+          </div>
+          <div class="tag tag-infra">INFRA</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">헬스체크 · 모니터링 · 알림</div>
+            <div class="task-d">Sequencer 가동 상태, Merkle Root 제출 주기, 미처리 이벤트 큐 모니터링. 이상 감지 시 알림.</div>
+          </div>
+          <div class="tag tag-infra">INFRA</div>
+        </div>
+
+        <div class="dels">
+          <div class="dels-label">산출물</div>
+          <div class="del">PrivacyPoolCore</div>
+          <div class="del">IComplianceModule 인터페이스</div>
+          <div class="del">AES-256-GCM</div>
+          <div class="del">Fixed Denomination</div>
+          <div class="del">SDK 분해 알고리즘</div>
+          <div class="del">MySQL / Redis 전환</div>
+          <div class="del">배치 · 재시도 로직</div>
+          <div class="del">모니터링</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 1 ── -->
+    <div class="ph c1">
+      <div class="ph-head">
+        <div class="ph-badge">PHASE 1</div>
+        <div>
+          <div class="ph-name">Cross Pay</div>
+          <div class="ph-desc">오프체인 결제를 온체인으로 가져온다. Privacy Pool의 기본 Tx와 초기 사용량 확보. Operator 없는 단일 단계 출금.</div>
+        </div>
+        <div class="ph-dur">M2 · 1개월</div>
+      </div>
+      <div class="ph-body">
+
+        <div class="task">
+          <div>
+            <div class="task-t">Item Shop + Privacy Layer 결제 통합</div>
+            <div class="task-d">
+              ZK proof → <code>claimWithdrawal</code> 단일 단계 → 스텔스 주소에서 Item Shop 직접 ERC-20 수신.<br>
+              Operator 없음. 2-stage 없음. <code>IComplianceModule</code> 연결 슬롯만 준비 (Phase 4 대비).
+            </div>
+          </div>
+          <div class="tag tag-new">NEW</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">Gas 최적화</div>
+            <div class="task-d">현재 HonkVerifier ~2.9M gas. Proof aggregation 또는 L2 환경에서의 calldata 압축으로 결제당 Gas 비용 절감. 목표: 반복 결제가 경제적으로 가능한 수준.</div>
+          </div>
+          <div class="tag tag-infra">INFRA</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">Key 조회 API</div>
+            <div class="task-d">Sequencer ECIES 인프라 재사용. 별도 컨트랙트 없음. 허용된 상대방에게만 <code>npk + enc_pubkey</code> 암호화 반환. Agent가 상대방 키를 자동 조회하여 결제 실행.</div>
+          </div>
+          <div class="tag tag-new">NEW</div>
+        </div>
+
+        <div class="note note-info">
+          <span>→</span>
+          <span>Game Agent: denomination 분해 → 입금 → ZK proof 생성 → claimWithdrawal → Item Shop 수령. Operator 개입 없음. 전 과정 자율 처리.</span>
+        </div>
+
+        <div class="dels">
+          <div class="dels-label">산출물</div>
+          <div class="del">Item Shop 통합</div>
+          <div class="del">Privacy 결제 경로</div>
+          <div class="del">Gas 최적화</div>
+          <div class="del">Key 조회 API</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 2 ── -->
+    <div class="ph c2">
+      <div class="ph-head">
+        <div class="ph-badge">PHASE 2</div>
+        <div>
+          <div class="ph-name">Privacy Pool Agent</div>
+          <div class="ph-desc">Privacy Pool을 ERC-8004 Agent로 등록. 다른 Agent에게 프라이버시 결제 인프라를 서비스로 제공.</div>
+        </div>
+        <div class="ph-dur">M3 · 1개월</div>
+      </div>
+      <div class="ph-body">
+
+        <div class="task">
+          <div>
+            <div class="task-t">ERC-8004 Identity Registry 등록</div>
+            <div class="task-d">
+              서비스명 "privacy-preserving payment", 엔드포인트 Sequencer API, Pool fee 주소 등록.<br>
+              Registration File: <code>name / description / services(A2A, MCP) / agentWallet</code> 구조 준수.<br>
+              <code>/.well-known/agent-registration.json</code> 도메인 검증 파일 배포.
+            </div>
+          </div>
+          <div class="tag tag-erc">ERC-8004</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">Sequencer — Agent 위임 수신 인터페이스</div>
+            <div class="task-d">
+              외부 Agent로부터 결제 위임 요청을 수신하는 API 엔드포인트 추가.<br>
+              요청: 수신자 키 + 금액 → Sequencer가 denomination 분해, 입금, ZK proof 생성, 출금 자율 처리.<br>
+              Game Agent는 완료 이벤트(tx hash)만 수신.
+            </div>
+          </div>
+          <div class="tag tag-new">NEW</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">ERC-8004 Reputation 초기 적립</div>
+            <div class="task-d">처리 건수, 성공률, 응답 시간을 Reputation Registry에 기록 시작. Privacy Pool의 신뢰 지표를 온체인에 누적.</div>
+          </div>
+          <div class="tag tag-erc">ERC-8004</div>
+        </div>
+
+        <div class="note note-info">
+          <span>→</span>
+          <span>이 시점부터 ERC-8004 생태계의 다른 Agent들이 Privacy Pool을 자동 발견하고 결제를 위임할 수 있다.</span>
+        </div>
+
+        <div class="dels">
+          <div class="dels-label">산출물</div>
+          <div class="del">ERC-8004 등록</div>
+          <div class="del">도메인 검증</div>
+          <div class="del">위임 수신 API</div>
+          <div class="del">Reputation 적립</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 3 ── -->
+    <div class="ph c3">
+      <div class="ph-head">
+        <div class="ph-badge">PHASE 3</div>
+        <div>
+          <div class="ph-name">Identity Tree</div>
+          <div class="ph-desc">Compliance가 요구되는 순간 이 모듈이 전제 조건이 된다. Phase 4 Compliance와 함께 통합.</div>
+        </div>
+        <div class="ph-dur">M4 · 1개월</div>
+      </div>
+      <div class="ph-body">
+
+        <div class="task">
+          <div>
+            <div class="task-t">Identity ZK Circuit — Noir</div>
+            <div class="task-d">
+              Privacy Pool 회로와 동일 구조 (Poseidon2 + Merkle Inclusion).<br>
+              증명: "이 신원 commitment가 유효한 Identity Tree에 존재한다."<br>
+              Selective Disclosure: 공개할 속성만 public input.<br>
+              KYC: <code>isAdult / isKYC / sanctionsFree</code> &nbsp;|&nbsp; KYA: <code>agentId / controllerAddress / permissionScope</code>
+            </div>
+          </div>
+          <div class="tag tag-new">NEW</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">IdentityRegistry 컨트랙트</div>
+            <div class="task-d">Issuer 서명 commitment → Merkle Tree 삽입 → Root 온체인 제출. <code>IComplianceModule</code> 구현체로 Phase 4에서 <code>PrivacyPoolCore</code>에 플러그인.</div>
+          </div>
+          <div class="tag tag-new">NEW</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">ERC-8004 Identity Backing</div>
+            <div class="task-d">ERC-8004 <code>agentId</code>를 Privacy Pool Identity Tree의 commitment로 앵커링. ERC-8004 등록 사실을 ZK로 증명하되 <code>agentId</code> 자체는 비공개. Privacy Pool이 ERC-8004 신원을 신뢰 근거로 사용할 수 있는 연결 고리. ERC-8004 Draft 변경에 대응하기 위해 어댑터 레이어로 완전 격리.</div>
+          </div>
+          <div class="tag tag-erc">ERC-8004</div>
+        </div>
+
+        <div class="dels">
+          <div class="dels-label">산출물</div>
+          <div class="del">Identity ZK Circuit</div>
+          <div class="del">IdentityRegistry</div>
+          <div class="del">Selective Disclosure SDK</div>
+          <div class="del">ERC-8004 Identity Backing</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 4 ── -->
+    <div class="ph c4">
+      <div class="ph-head">
+        <div class="ph-badge">PHASE 4</div>
+        <div>
+          <div class="ph-name">Compliance</div>
+          <div class="ph-desc">Identity Tree 위에 Compliance Layer를 연결. 규제 대상 거래 지원. Phase 3 완료 후 착수.</div>
+        </div>
+        <div class="ph-dur">M5 · 1개월</div>
+      </div>
+      <div class="ph-body">
+
+        <div class="task">
+          <div>
+            <div class="task-t">Multisig Operator 배포</div>
+            <div class="task-d">Gnosis Safe 기반 N-of-M. <code>attestWithdrawal</code> 권한 분산. 단일 실패점 제거.</div>
+          </div>
+          <div class="tag tag-must">MUST</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">IComplianceModule 구현 — IdentityRegistry 연결</div>
+            <div class="task-d">
+              Phase 3 IdentityRegistry를 <code>IComplianceModule</code> 구현체로 <code>PrivacyPoolCore</code>에 플러그인.<br>
+              컨트랙트 재배포 없이 모듈 교체만으로 완료.<br>
+              고액 출금, 규제 대상 거래에서 KYC / KYA ZK proof 요구.
+            </div>
+          </div>
+          <div class="tag tag-arch">ARCH</div>
+        </div>
+
+        <div class="task">
+          <div>
+            <div class="task-t">2-stage 출금 + AML 스크리닝</div>
+            <div class="task-d">
+              <code>initiateWithdrawal</code> → Operator 동시 검토 (≤5초) → <code>attestWithdrawal</code>.<br>
+              OFAC 제재 주소 스크리닝. Controller 주소 기준 AML 체크. 스크리닝 결과 ECIES 암호화 감사 로그 보존.<br>
+              24시간 후 자동 <code>claimWithdrawal</code> 가능 (검열 저항 유지).
+            </div>
+          </div>
+          <div class="tag tag-sec">SECURITY</div>
+        </div>
+
+        <div class="note note-warn">
+          <span>⚠</span>
+          <span>Phase 4는 Phase 3 Identity Tree 완료가 전제다. Identity 없는 Compliance는 Controller Binding으로만 운영되며 규제 방어력이 낮다.</span>
+        </div>
+
+        <div class="dels">
+          <div class="dels-label">산출물</div>
+          <div class="del">Multisig Operator</div>
+          <div class="del">IComplianceModule (IdentityRegistry 연결)</div>
+          <div class="del">2-stage 출금</div>
+          <div class="del">AML 스크리닝</div>
+          <div class="del">감사 로그</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PHASE 5 ── -->
+    <div class="ph c5">
+      <div class="ph-head">
+        <div class="ph-badge">PHASE 5</div>
+        <div>
+          <div class="ph-name">Expansion</div>
+          <div class="ph-desc">Phase 1 상업적 검증 완료 후 시장 수요에 따라 우선순위를 결정. 방향성만 열어둔다.</div>
+        </div>
+        <div class="ph-dur">M6+ · 시장 검증 후</div>
+      </div>
+      <div class="ph-body">
+
+        <div class="note note-warn" style="margin-bottom: 8px;">
+          <span>⚠</span>
+          <span>각 아이템의 착수 시점과 우선순위는 Phase 1 운영 데이터와 시장 반응을 기반으로 결정한다.</span>
+        </div>
+
+        <div class="ideas">
+          <div class="idea">
+            <div class="idea-title">Privacy ENS</div>
+            <div class="idea-desc">허용된 상대방에게만 키가 공개되는 선택적 이름 레지스트리. Key 조회 API의 온체인 확장.</div>
+          </div>
+          <div class="idea">
+            <div class="idea-title">Headless Agent Merchant</div>
+            <div class="idea-desc">Agent가 서비스를 ERC-8004에 등록하고 자율 판매. 수익을 Privacy Pool에 자동 재예치.</div>
+          </div>
+          <div class="idea">
+            <div class="idea-title">Headless Agent Customer</div>
+            <div class="idea-desc">Agent가 예산 범위 내에서 서비스를 자율 구매. Controller 승인 없이 소액 결제 실행.</div>
+          </div>
+          <div class="idea">
+            <div class="idea-title">Agent Intent Market</div>
+            <div class="idea-desc">Agent가 Intent를 선언하면 Solver Agent들이 입찰. ERC-8004 Reputation으로 Solver 자동 선택.</div>
+          </div>
+          <div class="idea">
+            <div class="idea-title">A2A Advertising</div>
+            <div class="idea-desc">광고주가 Pool에 예치 → Agent가 광고 소비 ZK proof 생성 → 보상 수령. 소비 내역 비공개.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /phases -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>PRIVACY POOL — CONFIDENTIAL · v6</div>
+    <div>2026.03.26</div>
+  </div>
+
+</div>
+</body>
+</html>
